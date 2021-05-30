@@ -1,0 +1,1185 @@
+<!doctype html>
+<html>
+<!-- 本代码所有都是屎一样的，等我抽时间整理，以下所有函数简直是屎一样！！！ -->
+<head>
+  <title>Public Sandbox Detection</title>
+  <meta charset="utf-8">
+  <meta name="description" content="VPN,v2ray,trojan,wireguard,快速的公共节点,免费节点分享">
+  <meta name="keywords" content="VPN,v2ray,trojan,wireguard,快速的公共节点,免费节点分享">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+  <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <base target="_blank">
+  <script type="text/javascript">
+    const REDIRECT = () => {
+      console.log("%c 作者：Escher1108", "font-size: 24px;font-style: italic;color: brown;");
+      var checkStatus;
+      var element = new Image();
+      // let arr = []
+      // var element = document.createElement('any');
+      element.__defineGetter__('id', function () {
+        checkStatus = 'on';
+      });
+
+      setInterval(function () {
+        checkStatus = 'off';
+        console.log(element);
+        // arr.push(element)
+        // if(arr.length >2) return window.location.href = 'https://01.1011.ml';
+        // console.clear();
+        if (checkStatus == 'on') return window.location.href = 'https://01.1011.ml';
+      }, 1000)
+    }
+    REDIRECT()
+
+    function Time() {
+      let titleText = document.querySelector('#titleText')
+      var date = new Date();
+      year = date.getFullYear();
+      month = date.getMonth() + 1;
+      day = date.getDate();
+      hours = date.getHours();
+      minutes = date.getMinutes();
+      seconds = date.getSeconds();
+      if (minutes < 10) {
+        minutes = "0" + minutes;
+      }
+      titleText.innerText = hours + ":" + minutes;
+      currentTime = year + "年" + month + "月" + day + "日 " + hours + ":" + minutes;
+    };
+    setInterval("Time()", 1000);
+
+    //总函数
+    const TOTAL = () => {
+      const WARN = document.querySelector('.warning')
+      const WARNBOX = document.querySelector('.warning-box')
+      const CONTAINER = document.querySelector('.container')
+      WARN.classList.add("shower")
+      CONTAINER.style.display = 'none';
+      document.querySelector('#closedw').onclick = function () {
+        document.querySelector('.warning').classList.remove("shower")
+        document.querySelector('.container').style.display = 'block'
+      }
+    }
+    //禁止右击
+    document.oncontextmenu = function () {
+      TOTAL()
+      return false;
+    }
+
+    //禁止键盘事件
+    document.onkeydown = function (e) {
+      if (e.shiftKey && e.ctrlKey && e.keyCode === 73) {
+        TOTAL()
+        return false
+      } else if (e.shiftKey && e.ctrlKey && e.keyCode === 74) {
+        TOTAL()
+        return false
+      }
+      if (e.keyCode === 123) {
+        TOTAL()
+        return false
+      }
+    }
+    // function addMeta(name, content) {
+    //     //手动添加mate标签
+    //     let meta = document.createElement('meta');
+    //     meta.content = content;
+    //     meta.httpEquiv = name;
+    //     document.getElementsByTagName('head')[0].appendChild(meta);
+    //   }
+
+
+    // 网络监听
+    window.addEventListener('online', function () {
+      location.reload()
+    });
+    window.addEventListener('offline', function () {
+      alert('网络已断开，请检查！')
+    });
+    /*  if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+                        alert("禁止访问！");
+                        window.location.href ="https://jkgblog.com";
+                      } else if (/(Android)/i.test(navigator.userAgent)) {
+                      // window.location.href ="https://jkgblog.com";
+                    } else {
+                      alert("禁止访问！");
+                      window.location.href ="https://jkgblog.com";
+                    };
+                    */
+    window.onload = function () {
+      Swal.fire('Any fool can use a computer')
+    }
+  </script>
+  <style>
+    * {
+      box-sizing: border-box;
+
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      height: auto;
+      width: 100%;
+      overflow: hidden;
+      font-family: monospace;
+    }
+
+    @keyframes animate {
+      0% {
+        filter: hue-rotate(0deg);
+      }
+
+      50% {
+        filter: hue-rotate(180deg);
+      }
+
+      100% {
+        filter: hue-rotate(360deg);
+      }
+    }
+
+    @keyframes img {
+      0% {
+        background-image: url("https://w.wallhaven.cc/full/y8/wallhaven-y8q6vl.jpg");
+      }
+
+      40% {
+        background-image: url("https://w.wallhaven.cc/full/9m/wallhaven-9mzm21.jpg");
+      }
+
+      75% {
+        background-image: url('https://w.wallhaven.cc/full/z8/wallhaven-z8p5lg.png');
+      }
+
+      100% {
+        background-image: url("https://w.wallhaven.cc/full/e7/wallhaven-e78lr8.jpg");
+      }
+    }
+
+
+    .container::before {
+      content: '';
+      top: 0;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      /*   
+      https://uploadbeta.com/api/pictures/random
+      https://acg.yanwz.cn/wallpaper/api.php
+      https://api.btstu.cn/sjbz/?lx=dongman
+       */
+      background-image: url('https://w.wallhaven.cc/full/g7/wallhaven-g7wdvq.png');
+      height: 100vh;
+      /* background-image: radial-gradient(red 5%, yellow 15%, green 60%); */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      -webkit-background-size: cover;
+      filter: blur(1.2px);
+      transform: scale(1.03);
+      z-index: -1;
+      animation: img 10s ease-in-out infinite;
+    }
+
+    .container {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      filter: hue-rotate(90deg);
+      animation: animate 8s linear infinite;
+      /* display: none; */
+    }
+
+
+    div.search {
+      padding: 30px 0;
+    }
+
+    section {
+      position: relative;
+      width: 300px;
+      margin: 0 auto;
+      opacity: 1;
+    }
+
+    input,
+    button {
+      border: none;
+      outline: none;
+    }
+
+    input {
+      width: 100%;
+      height: 42px;
+      padding-left: 13px;
+    }
+
+    button {
+      height: 42px;
+      width: 42px;
+      cursor: pointer;
+      position: absolute;
+    }
+
+    /*搜索框1*/
+    .bar1 {
+      /*background: #A3D0C3;*/
+      text-align: center;
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .bar1 input {
+      border: 2px solid #ffaa00;
+      border-radius: 20px;
+      background: #fff0f7;
+      /* background: #00000010; */
+      color: #9E9C9C;
+    }
+
+    .bar1 button {
+      top: 0;
+      right: 0;
+      background: #ffaa00;
+      /* border-radius: 0 5px 5px 0; */
+      border-radius: 20px;
+    }
+
+    .bar1 button:before {
+      content: "\f002";
+      font-family: FontAwesome;
+      font-size: 16px;
+      color: #F9F0DA;
+    }
+
+    h2 {
+      background: linear-gradient(to right, red, blue);
+      -webkit-background-clip: text;
+      color: transparent;
+      font-size: 2.0rem;
+      cursor: pointer;
+      transition: 3s;
+    }
+
+    h2:hover {
+      transition: 2s;
+      transform: rotateY(180deg);
+    }
+
+    .box {
+      display: none;
+    }
+
+    .version {
+      position: absolute;
+      bottom: 15px;
+      float: left;
+      background-color: white;
+    }
+
+    .version span {
+      width: 5px;
+    }
+
+    .app {
+      width: 150px;
+      height: 150px;
+      display: none;
+    }
+
+    img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .text_ {
+      display: none;
+      margin-left: 20px;
+      font-family: "arial narrow";
+    }
+
+    .footer-copyright {
+      bottom: 0;
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      line-height: 50px;
+      font-size: 1.2rem;
+      display: flex;
+      justify-content: space-around;
+      background: rgba(255, 255, 255, 0.5);
+    }
+
+    .footer-copyright a {
+      text-decoration: none;
+      color: #0f0b01;
+      font-size: 0.9rem;
+    }
+
+    .footer-copyright a:hover {
+      color: #37bcce;
+    }
+
+    /* warning */
+    .warning {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      max-width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      transition: 2s;
+      background: #00000050;
+      top: 0;
+      left: -100%;
+    }
+
+    .warning-box::before {
+      border: 1px solid red;
+    }
+
+    .warning-box {
+      text-align: center;
+      width: 300px;
+      height: 200px;
+      background: #F9F0DA;
+      border-radius: 10px;
+    }
+
+    .warning-box input {
+      margin: 10px;
+      width: 80px;
+      border-radius: 5px;
+      color: #fff0f7;
+      background: #000000;
+      cursor: pointer;
+    }
+
+    /* donate */
+    .donate-box {
+      top: 0;
+      right: -100%;
+      position: absolute;
+      /*绝对定位释放原来位置*/
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 2s;
+      background: linear-gradient(-35deg, rgb(122, 191, 194) 30%, rgb(121, 50, 50) 50%, #3b80ad 20%);
+      animation: animate 10s linear infinite;
+    }
+
+    .donate-box .donate-info {
+      position: absolute;
+      width: 350px;
+      height: 380px;
+      box-shadow: 8px 5px 20px #eee;
+      border-radius: 15px;
+      cursor: pointer;
+    }
+
+    .donate-box span::before {
+      position: absolute;
+      top: 420px;
+      left: 165px;
+      content: '\f00d';
+      font-family: FontAwesome;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .donate-box .donate-info p {
+      top: 0;
+      left: 5px;
+      font-family: 'Times New Roman', Times, serif;
+      color: snow;
+      padding: 5px;
+    }
+
+    .donate-box .donate-info img {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 5px;
+    }
+
+    .donate-box .donate-info h2 {
+      text-align: center;
+    }
+
+    /* encryption */
+    /* .encryption{
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      background: #37bcce;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .encryption .keys{
+      width: 400px;
+      height:300px;
+      background-color: #9E9C9C;
+    }
+
+    .encryption .keys .boxx{
+      margin: 80px auto;
+      width: 200px;
+      text-align: center;
+    } */
+
+    /* 弹窗警告 */
+    /* .warnText { */
+    /* width: 100%;
+      height: 100vh;
+      position: absolute; */
+    /* background-color: #9E9C9C; */
+    /* background: #00d2ff; */
+    /* fallback for old browsers */
+    /* background: -webkit-linear-gradient(to right, #928DAB, #00d2ff); */
+    /* Chrome 10-25, Safari 5.1-6 */
+    /* background: linear-gradient(to right, #928DAB, #00d2ff); */
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    /* } */
+
+    /* .warnText::before {
+      content: '';
+      width: 100%;
+      height: 100vh;
+      transform: scale(1.03);
+      z-index: 1000;
+    }
+
+    .warnText .warnBox {
+      position: absolute;
+      width: 350px;
+      height: 450px;
+      border: 1px red solid;
+      text-align: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .warnText .warnBox .warnTitle{
+      width: auto;
+      height: 40px;
+      background-color: #fff0f7;
+    } */
+
+    .shower {
+      left: 0;
+      transition: 1.5s;
+    }
+
+    .showerd {
+      right: 0;
+      transition: 1.5s;
+    }
+
+    .showerd .donate-info {
+      transition: 1.5s;
+      transform: rotateZ(360deg);
+    }
+
+    .alert {
+      width: 300px;
+      height: auto;
+      position: absolute;
+      /* border: 1px red solid; */
+      top: 10px;
+      right: 10px;
+      /* display: flex; */
+      /* justify-content: space-around; */
+      color: #eee;
+      background-color: #37bcce;
+      border-radius: 5px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .alert ul li{
+      padding: 5px;
+    }
+
+    .alert ul li:nth-child(6){
+      color: #ff0000;
+    }
+
+    /* 手机模式 */
+    @media screen and (max-width:760px) {
+      body {
+        margin: 0;
+        padding: 0;
+        background: url(https://api.btstu.cn/sjbz/?lx=m_dongman) no-repeat center center fixed;
+        background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        -webkit-background-size: cover;
+        height: auto;
+        width: 100%;
+        overflow: hidden;
+        animation: animate 10s infinite linear;
+        font-family: serif;
+      }
+
+      .right-cp {
+        display: none;
+      }
+
+      .footer-copyright {
+        display: none;
+      }
+
+      .donate {
+        display: none;
+        /* position: absolute;
+        bottom: 70px;
+        right: 30px;
+        height: 25px;
+        width: 42px;
+        cursor: pointer; */
+      }
+
+      .deng-box,
+      .deng-box1 {
+        display: none;
+      }
+
+      marquee {
+        display: none;
+      }
+
+      .box {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        /* border: 1px red solid; */
+        display: flex;
+        margin-top: 15px;
+        justify-content: space-around;
+        color: #eee;
+      }
+
+      .box .gg {
+        width: 50px;
+        height: 25px;
+        padding: 3px;
+        background-color: #ffa500;
+        border-radius: 15px;
+      }
+
+      .alert {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width:350px) {
+      .footer-copyright {
+        display: none;
+      }
+
+      .donate,
+      .donate-info {
+        display: none;
+      }
+
+      .deng-box,
+      .deng-box1 {
+        display: none;
+      }
+
+      marquee {
+        display: none;
+      }
+
+      .alert {
+        display: none;
+      }
+    }
+  </style>
+
+  <!-- 灯笼 -->
+  <!-- <style>
+    .deng-box {
+      position: fixed;
+      top: -40px;
+      right: -10px;
+      z-index: 999;
+    }
+
+    .deng-box1 {
+      position: fixed;
+      top: -30px;
+      left: 10px;
+      z-index: 999;
+    }
+
+    .deng-box1 .deng {
+      position: relative;
+      width: 120px;
+      height: 90px;
+      margin: 50px;
+      background: #d8000f;
+      background: rgba(216, 0, 15, 0.8);
+      border-radius: 50% 50%;
+      -webkit-transform-origin: 50% -100px;
+      -webkit-animation: swing 5s infinite ease-in-out;
+      box-shadow: -5px 5px 30px 4px rgba(252, 144, 61, 1);
+    }
+
+    .deng {
+      position: relative;
+      width: 120px;
+      height: 90px;
+      margin: 50px;
+      background: #d8000f;
+      background: rgba(216, 0, 15, 0.8);
+      border-radius: 50% 50%;
+      -webkit-transform-origin: 50% -100px;
+      -webkit-animation: swing 3s infinite ease-in-out;
+      box-shadow: -5px 5px 50px 4px rgba(250, 108, 0, 1);
+    }
+
+    .deng-a {
+      width: 100px;
+      height: 90px;
+      background: #d8000f;
+      background: rgba(216, 0, 15, 0.1);
+      margin: 12px 8px 8px 8px;
+      border-radius: 50% 50%;
+      border: 2px solid #dc8f03;
+    }
+
+    .deng-b {
+      width: 45px;
+      height: 90px;
+      background: #d8000f;
+      background: rgba(216, 0, 15, 0.1);
+      margin: -4px 8px 8px 26px;
+      border-radius: 50% 50%;
+      border: 2px solid #dc8f03;
+    }
+
+    .xian {
+      position: absolute;
+      top: -20px;
+      left: 60px;
+      width: 2px;
+      height: 20px;
+      background: #dc8f03;
+    }
+
+    .shui-a {
+      position: relative;
+      width: 5px;
+      height: 20px;
+      margin: -5px 0 0 59px;
+      -webkit-animation: swing 4s infinite ease-in-out;
+      -webkit-transform-origin: 50% -45px;
+      background: #ffa500;
+      border-radius: 0 0 5px 5px;
+    }
+
+    .shui-b {
+      position: absolute;
+      top: 14px;
+      left: -2px;
+      width: 10px;
+      height: 10px;
+      background: #dc8f03;
+      border-radius: 50%;
+    }
+
+    .shui-c {
+      position: absolute;
+      top: 18px;
+      left: -2px;
+      width: 10px;
+      height: 35px;
+      background: #ffa500;
+      border-radius: 0 0 0 5px;
+    }
+
+    .deng:before {
+      position: absolute;
+      top: -7px;
+      left: 29px;
+      height: 12px;
+      width: 60px;
+      content: " ";
+      display: block;
+      z-index: 999;
+      border-radius: 5px 5px 0 0;
+      border: solid 1px #dc8f03;
+      background: #ffa500;
+      background: linear-gradient(to right, #dc8f03, #ffa500, #dc8f03, #ffa500, #dc8f03);
+    }
+
+    .deng:after {
+      position: absolute;
+      bottom: -7px;
+      left: 10px;
+      height: 12px;
+      width: 60px;
+      content: " ";
+      display: block;
+      margin-left: 20px;
+      border-radius: 0 0 5px 5px;
+      border: solid 1px #dc8f03;
+      background: #ffa500;
+      background: linear-gradient(to right, #dc8f03, #ffa500, #dc8f03, #ffa500, #dc8f03);
+    }
+
+    .deng-t {
+      font-family: 华文行楷, Arial, Lucida Grande, Tahoma, sans-serif;
+      font-size: 3.2rem;
+      color: #dc8f03;
+      font-weight: bold;
+      line-height: 85px;
+      text-align: center;
+    }
+
+    .night .deng-t,
+    .night .deng-box,
+    .night .deng-box1 {
+      background: transparent !important;
+    }
+
+    @-moz-keyframes swing {
+      0% {
+        -moz-transform: rotate(-10deg)
+      }
+
+      50% {
+        -moz-transform: rotate(10deg)
+      }
+
+      100% {
+        -moz-transform: rotate(-10deg)
+      }
+    }
+
+    @-webkit-keyframes swing {
+      0% {
+        -webkit-transform: rotate(-10deg)
+      }
+
+      50% {
+        -webkit-transform: rotate(10deg)
+      }
+
+      100% {
+        -webkit-transform: rotate(-10deg)
+      }
+    }
+  </style> -->
+</head>
+
+<body>
+  <!-- 主要代码 -->
+  <div class="container">
+    <!-- 友情提示片段 -->
+    <!-- <marquee direction="滚动方向" style="color: #eee;font-size: 1rem;">
+      友情提示:该站点<b style="color: #ff0000;" id="siteVal"></b> 对<b style="color: #37bcce;"
+        id="textVal"></b>,且本站群部分IP已进入谷歌黑名单,会弹出谷歌人机验证,出于技术原因,当前无解,所以请直接输入网址进行访问,如:www.youtube.com。<span id="vip"></span>
+    </marquee> -->
+    <div class="search bar1">
+      <h2 id="titleText"></h2>
+      <section>
+        <input id="txtURL" type="text" placeholder="Search | 默认谷歌搜索" autofocus="">
+        <button id="btnGo" type="submit"></button>
+      </section>
+
+      <!-- 切换搜索引擎 -->
+      <div class="box">
+        <div class="gg">
+          <b id="baidu" onclick="sosoIt(1)">百度</b>
+        </div>
+        <div class="gg">
+          <b id="ss_360" onclick="sosoIt(2)">必应</b>
+        </div>
+        <div class="gg">
+          <b id="sg" onclick="sosoIt(3)">搜狗</b>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 更新提示 -->
+  <div class="alert">
+    <ul>
+      <li>此次更新版本为V 0.1.3，添加了几台服务器作为边缘网络</li>
+      <li>本项目支持输入域名访问！比如输入：www.redtube.com</li>
+      <li>本项目沙箱化，谷歌人机验证无法解决，请直接输入你想要去的网址</li>
+      <li>如果客官有任何问题，请及时与我联系：eschervip#gmail.com</li>
+      <li>如果客官手里有闲钱，点击下右下角进行捐赠以解决服务器开销！</li>
+    </ul>
+    <p style="text-align: center;" id="djs">30</p>
+  </div>
+
+  <!-- 非法操作警告 -->
+  <div class="warning">
+    <div class="warning-box">
+      <h2>警告</h2>
+      <p>STOP，请停止你的小动作！</p>
+      <p>小人专用页面，您老看到这个界面说明你手欠！</p>
+      <input type="button" value="关闭" id="closedw">
+    </div>
+  </div>
+  <!-- 捐赠信息 -->
+  <div class="donate-box">
+    <div class="donate-info">
+      <h2>你想成为FreeStar吗</h2>
+      <p>本站服务皆为了沙盒网站开发，目的是为了检测来源不明的可疑链接，如果你觉得本站对你有所帮助，
+        我希望能够得到你的赞助，缓解本站服务器每月 <b style="color:#ff0000;">$25</b> 的高额支出，赞助金额看你喜欢！救救孩子吧~</p>
+      <img src="https://tk.jkgblog.com/images/2020/10/10/1602333007.md.jpg" alt="jkgblog.com">
+      <span id="closedD" title="不赞助"></span>
+    </div>
+  </div>
+
+  <!-- 弹出警告 -->
+  <!-- <div class="warnText">
+    <div class="warnBox">
+      <div class="warnTitle">
+        <h3>友情提示</h3>
+      </div>
+      <div class="warnBody">
+
+      </div>
+    </div>
+  </div> -->
+
+  <!-- 加密页面 -->
+  <!-- <div class="encryption">
+    <div class="keys">
+     <div class="boxx">
+      <h3>请输入密码</h3>
+      <input type="password" id="pwd">
+      <button id="btn">确认</button>
+      <p style="color: red;">密码错误！请重试</p>
+     </div>
+    </div>
+  </div> -->
+
+  <!-- copyright -->
+  <div class="footer-copyright">
+
+    <div><b>Copyright：</b><span>©2019-2022 | <a style="font-size: 1.2rem;" href="https://jkgblog.com" target="_blank"
+          rel="noopener noreferrer">jkgblog.com</a></span></div>
+
+    <div><b>Copyright：</b><span>©2019-2022
+        <a style="font-size: 1.2rem;" href="#" target="_blank" rel="noopener noreferrer"></a></span>
+    </div>
+
+    <div class="right-cp">
+      <span>Thanks: </span>
+
+      <!-- <a href="https://cdn.mfyidc.com/" target="_blank" rel="noopener noreferrer" title="蜜蜂云CDN"> mfyidc CDN</a> | -->
+
+      <!-- <a href="https://cdn.mfyidc.com/" target="_blank" rel="noopener noreferrer" title="蜜蜂云免费CDN" id="cdn"></a> | -->
+
+      <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Service_Worker_API" target="_blank"
+        rel="noopener noreferrer" title="Service Worker">
+        Service Worker</a>
+    </div>
+    <div class="donate"><button id="donate"
+        style="width: 50px;margin-top: 5px;border-radius: 10px;background-color: skyblue;" title="成为赞助商">捐赠</button>
+    </div>
+
+
+    <!-- 灯笼1 -->
+    <!-- <div class="deng-box">
+      <div class="deng">
+        <div class="xian"></div>
+        <div class="deng-a">
+          <div class="deng-b">
+            <div class="deng-t">节</div>
+          </div>
+        </div>
+        <div class="shui shui-a">
+          <div class="shui-c"></div>
+          <div class="shui-b"></div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- 灯笼2 -->
+    <!-- <div class="deng-box1">
+      <div class="deng">
+        <div class="xian"></div>
+        <div class="deng-a">
+          <div class="deng-b">
+            <div class="deng-t">春</div>
+          </div>
+        </div>
+        <div class="shui shui-a">
+          <div class="shui-c"></div>
+          <div class="shui-b"></div>
+        </div>
+      </div>
+    </div> -->
+
+  </div>
+
+  <!-- 扫码下载代码 -->
+  <!-- <div class="version">
+		  <div class="app">
+		  	<img src="https://tk.jkgblog.com/images/2020/07/26/1.0.9.png">
+		  </div>
+		  
+		  <span id="download"><i class="fa fa-chevron-right"></i><span class="text_">--下载最新版本--</span></span>
+	  </div> -->
+
+  <!-- 扫码下载jQuery -->
+  <!--  <script type="text/javascript">
+	  	$(function(){
+		 $("#download").click(function(){
+			 $('.app,.text_').fadeIn(2000)
+			 $('i').hide(1500)
+		 })
+		 $('.app').click(function(){
+			 $('.app,.text_').fadeOut(1500)
+			 $('i').show(1500)
+		 })
+		})
+    </script> -->
+  <script>
+    const BTN = () => {
+      document.querySelector("#donate").onclick = function () {
+        // 存入数据检测
+        localStorage.setItem("id", "Jesmora");
+        document.querySelector('.container').style.display = 'none'
+        document.querySelector('.donate-box').classList.add('showerd')
+      }
+    }
+    BTN()
+
+    const CLSD = () => {
+      document.querySelector('#closedD').onclick = function () {
+        document.querySelector('.warning').classList.remove('shower')
+        document.querySelector('.donate-box').classList.remove('showerd')
+        document.querySelector('.container').style.display = 'block'
+      }
+    }
+    CLSD()
+
+    // 自定义线路
+    // selNodes.onchange = function () {
+    //   const items = this.options[this.selectedIndex]
+    //   let url = window.location.href;
+    //   items.value = url
+    // }
+
+    // 设置滚动字条
+    // function mq() {
+    //   let [text, text1, url, urlText] = ["联通/移动高速", "全网线路高速", window.location.hostname, "https://"];
+    //   document.querySelector("#vip").innerText = "VIP线路已隐藏，三网优化哦~~~快找找彩蛋吧！";
+    //   if (url == "js.zmirror.xyz") {
+    //     document.querySelector("#siteVal").innerText = urlText + url;
+    //     document.querySelector("#textVal").innerText = text;
+    //     document.querySelector("#vip").innerHTML = `${jsz}`;
+    //     document.querySelector('#cdn').setAttribute("href", "https://cdn.mfyidc.com/")
+    //     document.querySelector('#cdn').innerText = '蜜蜂云CDN'
+    //   } else if (url == "ss.navs.tk") {
+    //     document.querySelector("#siteVal").innerText = urlText + url;
+    //     document.querySelector("#textVal").innerText = text1;
+    //     document.querySelector("#vip").innerHTML = `${ssz}`;
+    //     document.querySelector('#cdn').setAttribute("href", "https://wujicloud.cn/")
+    //     document.querySelector('#cdn').innerText = '武极云CDN'
+    //   }
+
+
+    //   let [text, text1, url, urlText, jsz, ssz] = ["联通/移动高速", "全网高速线路", window.location.hostname, "https://", "<a href='https://ss.navs.tk'>切换到全网高速线路</a>", "<a href='https://js.zmirror.xyz'>切换到联通/移动高速</a>"];
+    //   if (url == "js.zmirror.xyz") {
+    //     document.querySelector("#siteVal").innerText = urlText + url;
+    //     document.querySelector("#textVal").innerText = text;
+    //     document.querySelector("#vip").innerHTML = `${jsz}`;
+    //     document.querySelector('#cdn').setAttribute("href", "https://cdn.mfyidc.com/")
+    //     document.querySelector('#cdn').innerText = '蜜蜂云CDN'
+    //   } else if (url == "ss.navs.tk") {
+    //     document.querySelector("#siteVal").innerText = urlText + url;
+    //     document.querySelector("#textVal").innerText = text1;
+    //     document.querySelector("#vip").innerHTML = `${ssz}`;
+    //     document.querySelector('#cdn').setAttribute("href", "https://wujicloud.cn/")
+    //     document.querySelector('#cdn').innerText = '武极云CDN'
+    //   }
+
+    // }
+
+    // 切换搜索引擎
+    function sosoIt(obj) {
+      var wd = document.getElementById("txtURL").value;
+      if (obj == 1) {
+        window.open("https://www.baidu.com/s?wd=" + wd)
+      }
+      if (obj == 2) {
+        window.open("https://www.bing.com/search?q=" + wd)
+      }
+      if (obj == 3) {
+        window.open("https://www.sogou.com/web?query=" + wd)
+      }
+    }
+
+    window.onload = function () {
+      let djs = document.querySelector('#djs');
+      let alt = document.querySelector('.alert');
+      let time = 30;
+      let set = setInterval(function () {
+        time--;
+        djs.innerHTML = time;
+        if (time === 0) {
+          alt.style.display = 'none';
+          clearInterval(set);
+        }
+      }, 1000);
+    }
+  </script>
+
+  <script>
+    const PAGE_CONF_SET = 110
+    const PAGE_CONF_GET = 111
+
+    const SW_CONF_RETURN = 112
+    const SW_CONF_CHANGE = 113
+
+    const PAGE_READY_CHECK = 200
+    const SW_READY = 201
+
+    const sw = navigator.serviceWorker
+
+
+    sw.addEventListener('message', onSwMsg)
+    sendMsgToSw(PAGE_READY_CHECK)
+
+    btnGo.onclick = function () {
+      // 获取输入框的值进行提示
+      const text = txtURL.value.trim()
+      if (text == "www.pornhub.com" || text == "www.xvideos.com") {
+        alert("违法站点，将重定向到安全站点！")
+      }
+      if (text) {
+        const url = './-----' + text;
+        open(url, '_blank', 'noopener,noreferrer')
+      }
+    }
+    txtURL.onkeypress = function (e) {
+      if (e.keyCode === 13) {
+        btnGo.onclick()
+      }
+    }
+    txtURL.setSelectionRange(0, txtURL.value.length)
+
+    function onSwMsg(e) {
+      const [cmd, msg] = e.data
+
+      switch (cmd) {
+        case SW_CONF_RETURN:
+          conf = msg
+          // showConf()
+          break;
+
+        case SW_CONF_CHANGE:
+          conf = msg
+          updateSelected()
+          break;
+
+        case SW_READY:
+          console.log('sw ready')
+          // showIcons()
+          sendMsgToSw(PAGE_CONF_GET)
+          break;
+      }
+    }
+
+    function onSwFail(err) {
+      txtURL.value = err
+    }
+
+    // selNode.onchange = function () {
+    //   const item = this.options[this.selectedIndex]
+    //   const node = item.value
+    //   conf.node_default = node
+    //   sendMsgToSw(PAGE_CONF_SET, conf)
+    // }
+
+    function sendMsgToSw(cmd, val) {
+      const ctl = sw.controller
+      if (!ctl) {
+        console.log('ctl is null')
+        return
+      }
+      ctl.postMessage([cmd, val])
+    }
+
+    // const SITE_LIST = [
+    //   ['google', ''],
+    //   ['youtube', ''],
+    //   ['twitter', 'twitter.com/google'],
+    //   ['flickr', ''],
+    //   ['quora', 'www.quora.com/topic/JavaScript-programming-language'],
+    //   ['twitch', 'www.twitch.tv/'],
+    //   ['reddit', ''],
+    //   ['wiki', 'zh.wikipedia.org/'],
+    //   ['gist', 'gist.github.com/'],
+    //   ['facebook', 'facebook.com/Google/'],
+    //   ['blogger', ''],
+    // ]
+
+    //     function showIcons() {
+    //       list.innerHTML = SITE_LIST.map(v => {
+    //         let [id, url] = v
+    //         url = url || `www.${id}.com/`
+    //         return `\
+    // <a rel="noopener noreferrer" href=./-----https://${url}>\
+    // <img width=128 height=128 src=__sys__/assets/ico/${id}.png></a>`
+    //       }).join('')
+    //     }
+
+    function addNodeItem(id, text) {
+      const optEl = document.createElement('option')
+      optEl.id = '--' + id
+      optEl.text = text
+      optEl.value = id
+      selNode.appendChild(optEl)
+    }
+
+    function updateSelected() {
+      const id = conf.node_default
+      const item = document.getElementById('--' + id)
+      if (item) {
+        item.selected = true
+      } else {
+        console.warn('unknown node:', id)
+      }
+    }
+
+    function showConf() {
+      for (const [id, node] of Object.entries(conf.node_map)) {
+        if (!node.hidden) {
+          addNodeItem(id, node.label)
+        }
+      }
+      updateSelected()
+    }
+
+  </script>
+
+</body>
+
+</html>
