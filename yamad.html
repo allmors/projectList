@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<!-- 
+--作者：Escher1108
+--时间：2020.4.22
+ --网站：https://jkgblog.com
+ -->
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>YAMAD NAOMI</title>
+		<link rel="icon" href="images/escher.ico" sizes="192x192">
+		<link href="css/magnific-popup.min.css" rel="stylesheet" />
+		<link rel="icon" href="images/escher.ico" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.magnific-popup.min.js"></script>
+		<!-- 1. Add latest jQuery and fancybox files -->
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+		<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+		<style>
+			body{
+				margin: 0;
+				padding: 0;
+				font-family: "monotype corsiva";
+			}
+			.bg{
+				background-color: #000000!important;
+			}
+			.nav-t{
+				margin-right: 100px;
+			}
+			.header{
+				position: fixed;
+				width: 100%;
+			}
+			.team-section{
+				background: #def1ef;
+				text-align: center;
+			}
+			.inner-width{
+				max-width: 1200px;
+				margin: auto;
+				padding: 40px;
+				color: #333;
+				overflow: hidden;
+			}
+			.team-section h1{
+				font-size: 2.0rem;
+				text-transform: uppercase;
+				/* display: inline-block; */
+				border-bottom: 4px solid;
+				padding-bottom: 10px;
+				margin-top: 15px;
+				text-shadow: 7px 6px 6px #cc2e46;
+			}
+			.pe{
+				float: left;
+				width: calc(100% /4);
+				overflow: hidden;
+				padding: 40px 0;
+			}
+			.pe img{
+				max-width: 210.98px;
+				height: 210.98px;
+				object-fit: cover;
+			}
+			.footer-copyright{
+				position: fixed;
+				height: 110px;
+				width: 100%;
+				line-height: 110px;
+				text-align: center;
+				bottom: 0;
+				color: #050010;
+				background-color: #000000;
+				background-image: url(images/others/footer.jpg);
+				background-position: center center;
+				background-size: cover;
+				transform: translate3d(0px, 0px, 0px);
+			}
+			.histoty-btn{
+				right: 20px;
+				position: fixed;
+				font-size: 1.5rem;
+				color: #414141;
+			}
+			.fa-chevron-up{
+				display: block;
+			}
+			.histoty-btn:hover{
+				text-decoration: none;
+				color: #050010;
+			}
+			@media screen and (max-width:600px) {
+				.pe{
+					width: calc(100% / 2);
+				}
+				.histoty-btn{
+					position: fixed;
+					float: right;
+					top: -30px;
+					right: 5px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<nav class="navbar navbar-expand-lg navbar-dark bg-primary bg">
+			  <a class="navbar-brand" href="index.html">Escher1108's Gallery</a>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			  </button>
+			
+			  <div class="collapse navbar-collapse nav-t" id="navbarColor01">
+			    <ul class="navbar-nav ml-auto">
+			      <li class="nav-item active">
+			        <a class="nav-link" href="index.html">首页<span class="sr-only">(current)</span></a>
+			      </li>
+			      <!-- <li class="nav-item">
+			        <a class="nav-link" href="#">Features</a>
+			      </li> -->
+				  <li class="nav-item dropdown">
+				          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				            图库
+				          </a>
+				          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+				            <a class="dropdown-item" href="KaileeMorgue.html">Kailee.Morgue</a>
+				            <a class="dropdown-item" href="SashaSloan.html">Sasha.Sloan</a>
+				            <a class="dropdown-item" href="yamad.html">YamadaNaomi</a>
+							<a class="dropdown-item" href="others.html">Others</a>
+				          </div>
+				        </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="https://jkgblog.com">关于</a>
+			      </li>
+			    </ul>
+			  </div>
+			</nav>
+		</div>
+		<div class="team-section">
+			<div class="inner-width">
+				<h1 id="headers">YamadNaomi</h1>
+				<div class="pers">
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/1.jpg"><img src="images/ymd/1.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/2.jpg"><img src="images/ymd/2.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/3.jpg"><img src="images/ymd/3.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/4.jpg"><img src="images/ymd/4.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/5.jpg"><img src="images/ymd/5.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/6.jpg"><img src="images/ymd/6.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/7.jpg"><img src="images/ymd/7.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/8.jpg"><img src="images/ymd/8.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/9.jpg"><img src="images/ymd/9.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/10.jpg"><img src="images/ymd/10.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/11.jpg"><img src="images/ymd/11.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/12.jpg"><img src="images/ymd/12.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/13.jpg"><img src="images/ymd/13.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/14.jpg"><img src="images/ymd/14.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/15.jpg"><img src="images/ymd/15.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/16.jpg"><img src="images/ymd/16.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/17.jpg"><img src="images/ymd/17.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/18.jpg"><img src="images/ymd/18.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/19.jpg"><img src="images/ymd/19.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/20.jpg"><img src="images/ymd/20.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/21.jpg"><img src="images/ymd/21.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/22.jpg"><img src="images/ymd/22.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/23.jpg"><img src="images/ymd/23.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/24.jpg"><img src="images/ymd/24.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/25.jpg"><img src="images/ymd/25.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/26.jpg"><img src="images/ymd/26.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/27.jpg"><img src="images/ymd/27.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/28.jpg"><img src="images/ymd/28.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/29.jpg"><img src="images/ymd/29.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/30.jpg"><img src="images/ymd/30.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/31.jpg"><img src="images/ymd/31.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/32.jpg"><img src="images/ymd/32.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/61.jpg"><img src="images/ymd/61.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/62.jpg"><img src="images/ymd/62.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/35.jpg"><img src="images/ymd/35.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/36.jpg"><img src="images/ymd/36.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/37.jpg"><img src="images/ymd/37.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/38.jpg"><img src="images/ymd/38.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/39.jpg"><img src="images/ymd/39.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/40.jpg"><img src="images/ymd/40.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/41.jpg"><img src="images/ymd/41.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/42.jpg"><img src="images/ymd/42.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/43.jpg"><img src="images/ymd/43.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/44.jpg"><img src="images/ymd/44.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/45.jpg"><img src="images/ymd/45.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/46.jpg"><img src="images/ymd/46.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/47.jpg"><img src="images/ymd/47.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/48.jpg"><img src="images/ymd/48.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/49.jpg"><img src="images/ymd/49.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/50.jpg"><img src="images/ymd/50.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/51.jpg"><img src="images/ymd/51.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/52.jpg"><img src="images/ymd/52.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/53.jpg"><img src="images/ymd/53.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/54.jpg"><img src="images/ymd/54.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/55.jpg"><img src="images/ymd/55.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/56.jpg"><img src="images/ymd/56.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/57.jpg"><img src="images/ymd/57.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/58.jpg"><img src="images/ymd/58.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/59.jpg"><img src="images/ymd/59.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/60.jpg"><img src="images/ymd/60.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/63.jpg"><img src="images/ymd/63.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/64.jpg"><img src="images/ymd/64.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/65.jpg"><img src="images/ymd/65.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/66.jpg"><img src="images/ymd/66.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/67.jpg"><img src="images/ymd/67.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/68.jpg"><img src="images/ymd/68.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/69.jpg"><img src="images/ymd/69.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/70.jpg"><img src="images/ymd/70.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/71.jpg"><img src="images/ymd/71.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/93.jpg"><img src="images/ymd/93.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/72.jpg"><img src="images/ymd/72.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/74.jpg"><img src="images/ymd/74.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/75.jpg"><img src="images/ymd/75.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/76.jpg"><img src="images/ymd/76.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/77.jpg"><img src="images/ymd/77.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/92.jpg"><img src="images/ymd/92.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/79.jpg"><img src="images/ymd/79.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/80.jpg"><img src="images/ymd/80.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/81.jpg"><img src="images/ymd/81.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/82.jpg"><img src="images/ymd/82.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/83.jpg"><img src="images/ymd/83.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/84.jpg"><img src="images/ymd/84.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/85.jpg"><img src="images/ymd/85.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/86.jpg"><img src="images/ymd/86.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/87.jpg"><img src="images/ymd/87.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/88.jpg"><img src="images/ymd/88.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/89.jpg"><img src="images/ymd/89.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/90.jpg"><img src="images/ymd/90.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/91.jpg"><img src="images/ymd/91.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/92.jpg"><img src="images/ymd/92.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/93.jpg"><img src="images/ymd/93.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/94.jpg"><img src="images/ymd/94.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/95.jpg"><img src="images/ymd/95.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/96.jpg"><img src="images/ymd/96.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/97.jpg"><img src="images/ymd/96.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/ymd/98.jpg"><img src="images/ymd/97.jpg" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer-copyright">
+			<span>Designed by:Escher1108 | © Copyright All right reserved</span>
+			<a title="返回顶部" href="#headers" class="histoty-btn"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+			<!-- Music -->
+			<!-- <div class="aplayer" data-id="2567433742" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true" data-volume="0.6" ></div> -->
+		</footer>
+		<script>
+			    function _scroll(){
+		          var scrollTop =$(window).scrollTop();
+		          if(scrollTop<10){
+		              $('.header').css('opacity',1);
+		          }else{
+		              $('.header').css('opacity',0.1);
+		          }
+		      }
+		      $(window).on('scroll',function() {
+		          _scroll()
+		      });
+		</script>
+		<!-- Optional JavaScript -->
+		    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	</body>
+</html>

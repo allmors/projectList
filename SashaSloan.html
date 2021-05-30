@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<!-- 
+--作者：Escher1108
+--时间：2020.4.22
+ --网站：https://jkgblog.com
+ -->
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>SASHA SLOAN</title>
+		<link rel="icon" href="images/escher.ico" sizes="192x192">
+		<link href="css/magnific-popup.min.css" rel="stylesheet" />
+		<link rel="icon" href="images/escher.ico" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.magnific-popup.min.js"></script>
+		<!-- Music -->
+		<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+		<script>var meting_api='http://api.mizore.cn/meting/api.php?server=:server&type=:type&id=:id'</script>
+		<script src="http://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+		<script src="http://cdn.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js"></script> -->
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" crossorigin="anonymous">
+		<!-- 1. Add latest jQuery and fancybox files -->
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+		<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+		<style>
+			body{
+				margin: 0;
+				padding: 0;
+				font-family: "monotype corsiva";
+			}
+			.bg{
+				background-color: #000000!important;
+			}
+			.nav-t{
+				margin-right: 100px;
+			}
+			.header{
+				position: fixed;
+				width: 100%;
+			}
+			.team-section{
+				background: #f1e0e9;
+				text-align: center;
+			}
+			.inner-width{
+				max-width: 1200px;
+				margin: auto;
+				padding: 40px;
+				color: #333;
+				overflow: hidden;
+			}
+			.team-section h1{
+				font-size: 2.0rem;
+				text-transform: uppercase;
+				/* display: inline-block; */
+				border-bottom: 4px solid;
+				padding-bottom: 10px;
+				margin-top: 15px;
+				text-shadow: 7px 6px 6px #000000;
+			}
+			.pe{
+				float: left;
+				width: calc(100% /4);
+				overflow: hidden;
+				padding: 40px 0;
+			}
+			.pe img{
+				max-width: 210.98px;
+				height: 210.98px;
+				object-fit: cover;
+			}
+			.footer-copyright{
+				position: fixed;
+				height: 110px;
+				width: 100%;
+				line-height: 110px;
+				text-align: center;
+				bottom: 0;
+				color: #050010;
+				background-color: #000000;
+				background-image: url(images/others/footer.jpg);
+				background-position: center center;
+				background-size: cover;
+				transform: translate3d(0px, 0px, 0px);
+			}
+			.histoty-btn{
+				right: 20px;
+				position: fixed;
+				font-size: 1.5rem;
+				color: #414141;
+			}
+			.fa-chevron-up{
+				display: block;
+			}
+			.histoty-btn:hover{
+				text-decoration: none;
+				color: #050010;
+			}
+			@media screen and (max-width:600px) {
+				.pe{
+					width: calc(100% / 2);
+				}
+				.histoty-btn{
+					position: fixed;
+					float: right;
+					top: -30px;
+					right: 5px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<nav class="navbar navbar-expand-lg navbar-dark bg-primary bg">
+			  <a class="navbar-brand" href="index.html">Escher1108's Gallery</a>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			  </button>
+			
+			  <div class="collapse navbar-collapse nav-t" id="navbarColor01">
+			    <ul class="navbar-nav ml-auto">
+			      <li class="nav-item active">
+			        <a class="nav-link" href="index.html">首页<span class="sr-only">(current)</span></a>
+			      </li>
+			      <!-- <li class="nav-item">
+			        <a class="nav-link" href="#">Features</a>
+			      </li> -->
+				  <li class="nav-item dropdown">
+				          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				            图库
+				          </a>
+				          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+				            <a class="dropdown-item" href="KaileeMorgue.html">Kailee.Morgue</a>
+				            <a class="dropdown-item" href="SashaSloan.html">Sasha.Sloan</a>
+				            <a class="dropdown-item" href="yamad.html">YamadaNaomi</a>
+							<a class="dropdown-item" href="others.html">Others</a>
+				          </div>
+				        </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="https://jkgblog.com">关于</a>
+			      </li>
+			    </ul>
+			  </div>
+			</nav>
+		</div>
+		<div class="team-section">
+			<div class="inner-width">
+				<h1 id="headers">Sasha.Sloan</h1>
+				<div class="pers">
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/1.jpg"><img src="images/sasha/1.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/2.jpg"><img src="images/sasha/2.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/3.jpg"><img src="images/sasha/3.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/4.jpg"><img src="images/sasha/4.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/5.jpg"><img src="images/sasha/5.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/6.jpg"><img src="images/sasha/6.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/7.jpg"><img src="images/sasha/7.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/8.jpg"><img src="images/sasha/8.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/9.jpg"><img src="images/sasha/9.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/10.jpg"><img src="images/sasha/10.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/11.jpg"><img src="images/sasha/11.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/12.jpg"><img src="images/sasha/12.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/13.jpg"><img src="images/sasha/13.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/14.jpg"><img src="images/sasha/14.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/15.jpg"><img src="images/sasha/15.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/16.jpg"><img src="images/sasha/16.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/17.jpg"><img src="images/sasha/17.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/18.jpg"><img src="images/sasha/18.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/19.jpg"><img src="images/sasha/19.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/20.jpg"><img src="images/sasha/20.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/21.jpg"><img src="images/sasha/21.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/22.jpg"><img src="images/sasha/22.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/23.jpg"><img src="images/sasha/23.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/24.jpg"><img src="images/sasha/24.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/25.jpg"><img src="images/sasha/25.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/26.jpg"><img src="images/sasha/26.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/27.jpg"><img src="images/sasha/27.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/28.jpg"><img src="images/sasha/28.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/29.jpg"><img src="images/sasha/29.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/30.jpg"><img src="images/sasha/30.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/31.jpg"><img src="images/sasha/31.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/32.jpg"><img src="images/sasha/32.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/33.jpg"><img src="images/sasha/33.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/34.jpg"><img src="images/sasha/34.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/35.jpg"><img src="images/sasha/35.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/36.jpg"><img src="images/sasha/36.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/37.jpg"><img src="images/sasha/37.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/38.jpg"><img src="images/sasha/38.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/39.jpg"><img src="images/sasha/39.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/40.jpg"><img src="images/sasha/40.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/41.jpg"><img src="images/sasha/41.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/42.jpg"><img src="images/sasha/42.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/43.jpg"><img src="images/sasha/43.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/44.jpg"><img src="images/sasha/44.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/45.jpg"><img src="images/sasha/45.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/46.jpg"><img src="images/sasha/46.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/47.jpg"><img src="images/sasha/47.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/48.jpg"><img src="images/sasha/48.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/49.jpg"><img src="images/sasha/49.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/50.jpg"><img src="images/sasha/50.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/51.jpg"><img src="images/sasha/51.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/52.jpg"><img src="images/sasha/52.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/53.jpg"><img src="images/sasha/53.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/54.jpg"><img src="images/sasha/54.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/55.jpg"><img src="images/sasha/55.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/56.jpg"><img src="images/sasha/56.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/57.jpg"><img src="images/sasha/57.jpg" /></a>
+					</div>
+					<div class="pe">
+						<a data-fancybox="gallery" href="images/sasha/58.jpg"><img src="images/sasha/58.jpg" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer-copyright">
+			<span>Designed by:Escher1108 | © Copyright All right reserved</span>
+			<a title="返回顶部" href="#headers" class="histoty-btn"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+			<!-- Music -->
+			<!-- <div class="aplayer" data-id="2567433742" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true" data-volume="0.6" ></div> -->
+		</footer>
+		<script>
+			    function _scroll(){
+		          var scrollTop =$(window).scrollTop();
+		          if(scrollTop<10){
+		              $('.header').css('opacity',1);
+		          }else{
+		              $('.header').css('opacity',0.1);
+		          }
+		      }
+		      $(window).on('scroll',function() {
+		          _scroll()
+		      });
+		</script>
+		<!-- Optional JavaScript -->
+		    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	</body>
+</html>
