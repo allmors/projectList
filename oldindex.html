@@ -2,9 +2,9 @@
  * @Author: Escher1108
  * @Website: https://jkgblog.com
  * @Date: 2021-04-06 20:10:16
- * @LastEditTime: 2021-05-01 19:24:00
+ * @LastEditTime: 2021-06-26 23:37:22
  * @LastEditors: Do not edit
- * @FilePath: \zhu\oldindex.html
+ * @FilePath: \projectList\oldindex.html
  * @Description: 耶斯莫拉
 -->
 <!DOCTYPE html>
@@ -23,7 +23,7 @@
 	<!-- <link rel="stylesheet" href="./css/img.css"> -->
 	<!-- <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script> -->
 	<!-- require MetingJS -->
-	<!-- <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script> -->
+	<!-- <script src="./js/Meting.min.js"></script> -->
 	<!-- jquery -->
 	<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
 	<!--樱花特效在线引入-->
@@ -32,18 +32,12 @@
 		integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
 	<script src="./js/devtools.js"></script>
 	<title>朱卿谊</title>
-	<!-- <script>
-        document.title = "朱卿谊x2";
-        //定时
-        setInterval(function(){
-            //取 title 中最后一个 字符
-            var first_char = document.title[0];
-            //取除了第一个剩下的
-            var last_string = document.title.substr(1);
-            //给title重新赋值
-            document.title = last_string + first_char;
-        }, 100);
-    </script> -->
+	<script>
+		window.onload = function () {
+			// 设置cookie
+			window.localStorage.setItem('jesmora', '朱卿谊');
+		}
+	</script>
 	<style>
 		html,
 		body {
@@ -174,6 +168,30 @@
 			}
 		}
 
+		@keyframes images-zhu {
+			0% {
+				-webkit-transform: rotate(0deg);
+				transform: rotate(0deg)
+			}
+
+			100% {
+				-webkit-transform: rotate(360deg);
+				transform: rotate(360deg);
+			}
+		}
+
+		@keyframes images-my {
+			0% {
+				-webkit-transform: rotate(360deg);
+				transform: rotate(360deg)
+			}
+
+			100% {
+				-webkit-transform: rotate(0deg);
+				transform: rotate(0deg)
+			}
+		}
+
 		/* body {
 			background-image: url("https://images.unsplash.com/photo-1559310589-2673bfe16970?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80");
 			background-size: cover;
@@ -193,6 +211,19 @@
 			width: 100%;
 			height: 100vh;
 			overflow: hidden;
+			/* filter: grayscale(100%);
+			filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+			-webkit-filter: grayscale(100%);
+			-moz-filter: grayscale(100%);
+			-ms-filter: grayscale(100%);
+			-o-filter: grayscale(100%); */
+		}
+
+		.containers::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
 			background-image: url("./files/images/1z.jpg");
 			background-size: auto 100%;
 			background-repeat: no-repeat;
@@ -205,24 +236,8 @@
 			animation-iteration-count: infinite;
 			animation-direction: alternate;
 			animation-timing-function: linear;
-			filter: grayscale(100%);
-			-webkit-filter: grayscale(100%);
-			-moz-filter: grayscale(100%);
-			-ms-filter: grayscale(100%);
-			-o-filter: grayscale(100%);
-			filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
-			/* left: -100%;
-			display: none; */
+			transform: scale(1.03);
 		}
-
-		/* .container::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
-
-        } */
 
 		.containers .box {
 			width: 300px;
@@ -246,11 +261,25 @@
 			transition: 2s rotate;
 			border: 2px solid seashell;
 			box-shadow: 0px 0px 15px rgb(177, 29, 86);
+			filter: blur(3px);
+		}
+
+		#zhu {
+			animation: images-zhu 3s linear infinite;
+			-moz-animation: imageszhu 3s linear infinite;
+			-webkit-animation: images-zhu 3s linear infinite;
+			-o-animation: images-zhu 3s linear infinite;
+		}
+
+		#my {
+			animation: images-my 3s linear infinite;
+			-moz-animation: images-my 3s linear infinite;
+			-webkit-animation: images-my 3s linear infinite;
+			-o-animation: images-my 3s linear infinite;
 		}
 
 		.containers .box img:hover {
 			cursor: pointer;
-			transform: rotate(360deg);
 			transition: 2s;
 		}
 
@@ -551,10 +580,10 @@
 				<img id="zhu" src="https://q1.qlogo.cn/g?b=qq&nk=1014669842&s=640" alt="">
 			</div>
 			<div>
-				<span class="xin" style="color: red;" id="sug">🖤</span>
+				<span class="xin" style="color: red;" id="sug">💖</span>
 			</div>
 			<div>
-				<img src="https://q1.qlogo.cn/g?b=qq&nk=3095697814&s=640" alt="">
+				<img id="my" src="https://q1.qlogo.cn/g?b=qq&nk=3095697814&s=640" alt="">
 			</div>
 		</div>
 		<p class="time"><span id="runtime_span" class="time"></span></p>
@@ -575,7 +604,7 @@
 
 		<!-- 音乐 -->
 		<!-- <div class="music">
-			<meting-js server="netease" type="playlist" id="2567433742" fixed="true" autoplay="true" loop="all"
+			<meting-js server="netease" type="playlist" id="2224503870" fixed="true" autoplay="true" loop="all"
 				order="random" preload="auto" list-folded="ture" list-max-height="500px" lrc-type="1">
 			</meting-js>
 		</div> -->
@@ -589,7 +618,6 @@
 				<h3>《忏悔录》</h3>
 				<ol>
 					<li>2021.4.14，因为我无理要求，惹到了朱仙子，对不起！</li>
-					<li>心欲不减，难免一身怆然.</li>
 				</ol>
 			</div>
 			<div class="record-center">
@@ -597,8 +625,8 @@
 				<ol>
 					<li>2021.3.26，第一次跟朱卿谊语音通话。</li>
 					<li>2021.4.9，人生第一次戴小皮筋，朱卿谊给的。</li>
-					<li>2021.4.10，我与朱卿谊最后一次视频通话。</li>
-					<li>2021.4.23，我与朱卿谊最后一次一起看电影。</li>
+					<li>2021.4.10，我与朱卿谊第一次视频通话。</li>
+					<li>2021.4.23，我与朱卿谊第一次一起看电影。</li>
 					<li>2021.4.24，最后一次抛出问题，对不起，谢谢！</li>
 				</ol>
 			</div>
@@ -606,7 +634,7 @@
 				<h3>《You》</h3>
 				<ol>
 					<li>2021.4.27 <button id="control">Click Me</button></li>
-					<li>2021.4.27 <a href="./files/1011-朱卿谊.pdf">《To 朱卿谊》</a></li>
+					<li>2021.4.27 <a href="#" id="download" style="color: blue;" title="点击下载文件">《To 朱卿谊》</a></li>
 					<li>2021.4.4 00:35:29 - 2021.4.26 22:11:05</li>
 				</ol>
 			</div>
@@ -625,76 +653,89 @@
 		<h3 id='sugs'>不期而遇、不言而喻、不药而愈。</h3>
 	</div> -->
 	<script>
-		(function () {
-			// function snow(left, height, src) {
-			// 	var div = document.createElement("div");
-			// 	var img = document.createElement("img");
-			// 	div.appendChild(img);
-			// 	img.className = "roll";
-			// 	img.src = src;
-			// 	div.style.left = left + "px";
-			// 	div.style.height = height + "px";
-			// 	div.className = "div";
-			// 	document.getElementById("snowzone").appendChild(div);
-			// 	setTimeout(function () {
-			// 		document.getElementById("snowzone").removeChild(div);
-			// 		// console.log(window.innerHeight); 
-			// 	}, 5000);
-			// }
-			// setInterval(function () {
-			// 	var left = Math.random() * window.innerWidth;
-			// 	var height = Math.random() * window.innerHeight;
-			// 	var src = './images/' + Math.floor(Math.random() * 8 + 1) + ".png"; //1-6随机数
-			// 	snow(left, height, src);
-			// }, 500);
+			(function () {
+				// function snow(left, height, src) {
+				// 	var div = document.createElement("div");
+				// 	var img = document.createElement("img");
+				// 	div.appendChild(img);
+				// 	img.className = "roll";
+				// 	img.src = src;
+				// 	div.style.left = left + "px";
+				// 	div.style.height = height + "px";
+				// 	div.className = "div";
+				// 	document.getElementById("snowzone").appendChild(div);
+				// 	setTimeout(function () {
+				// 		document.getElementById("snowzone").removeChild(div);
+				// 		// console.log(window.innerHeight); 
+				// 	}, 5000);
+				// }
+				// setInterval(function () {
+				// 	var left = Math.random() * window.innerWidth;
+				// 	var height = Math.random() * window.innerHeight;
+				// 	var src = './images/' + Math.floor(Math.random() * 8 + 1) + ".png"; //1-6随机数
+				// 	snow(left, height, src);
+				// }, 500);
 
 
-			// 图片页
-			let zhu = document.querySelector('#zhu');
-			zhu.onclick = () => {
-				window.location.href = 'pictures.html' + '#5pyx5Y2/6LCKJuiSi+W8gOa4rw=='
-			}
+				// 图片页
+				let zhu = document.querySelector('#zhu');
+				zhu.onclick = () => {
+					window.location.href = 'pictures.html' + '#5pyx5Y2/6LCKJuiSi+W8gOa4rw=='
+				}
 
-			// jQuery代码
-			$(function () {
-				$('#runtime_span').click(function () {
-					$('.containers').addClass('cont');
-					$('.record').addClass('reco');
+				// jQuery代码
+				$(function () {
+					$('#runtime_span').click(function () {
+						$('.containers').addClass('cont');
+						$('.record').addClass('reco');
+					})
+
+					$('.closed').click(function () {
+						$('.containers').removeClass('cont');
+						$('.record').removeClass('reco');
+					})
+
+					$('#fs').click(function () {
+						$('.containers').addClass('cont');
+						$('.record').addClass('reco');
+					})
+
+					// $('#sug').click(function () {
+					// 	$('.containers').addClass('sug');
+					// 	$('.record').addClass('sug');
+					// })
+
+					// $('#sugs').click(function () {
+					// 	$('.containers').removeClass('sug');
+					// 	$('.record').removeClass('sug');
+					// })
+
+					//音乐
+					$('#control').click(function () {
+						let music = document.querySelector('#music');
+						if (music.paused) {
+							music.play();
+						} else {
+							music.pause();
+						}
+					})
+
+					$('#download').click(() => {
+						let person = prompt("请输入密码：");
+						let txt = window.localStorage.getItem('jesmora')
+						if (person !== txt || person === false) {
+							alert('密钥错误或为空，禁止下载！')
+						} else {
+							alert('密码成功')
+							$('#download').attr('href', './files/1011-朱卿谊.pdf')
+							$("#download").off("click")
+						}
+
+					})
+
 				})
-
-				$('.closed').click(function () {
-					$('.containers').removeClass('cont');
-					$('.record').removeClass('reco');
-				})
-
-				$('#fs').click(function () {
-					$('.containers').addClass('cont');
-					$('.record').addClass('reco');
-				})
-
-				// $('#sug').click(function () {
-				// 	$('.containers').addClass('sug');
-				// 	$('.record').addClass('sug');
-				// })
-
-				// $('#sugs').click(function () {
-				// 	$('.containers').removeClass('sug');
-				// 	$('.record').removeClass('sug');
-				// })
-
-				//音乐
-				$('#control').click(function () {
-					let music = document.querySelector('#music');
-					if (music.paused) {
-						music.play();
-					} else {
-						music.pause();
-					}
-				})
-
-			})
-			console.log("%cPower by jkgblog.com", " text-shadow: 0 1px 0 #ccc,0 2px 0 #c9c9c9,0 3px 0 #bbb,0 4px 0 #b9b9b9,0 5px 0 #aaa,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);font-size:2rem");
-		})();
+				console.log("%cPower by jkgblog.com", " text-shadow: 0 1px 0 #ccc,0 2px 0 #c9c9c9,0 3px 0 #bbb,0 4px 0 #b9b9b9,0 5px 0 #aaa,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);font-size:2rem");
+			})();
 	</script>
 	<script type="module">
 		// Check if it's open
