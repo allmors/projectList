@@ -32,12 +32,6 @@
 		integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
 	<script src="./js/devtools.js"></script>
 	<title>朱仙子</title>
-	<script>
-		window.onload = function () {
-			// 设置cookie
-			window.localStorage.setItem('jesmora', '朱卿谊');
-		}
-	</script>
 	<style>
 		html,
 		body {
@@ -608,6 +602,10 @@
 				order="random" preload="auto" list-folded="ture" list-max-height="500px" lrc-type="1">
 			</meting-js>
 		</div> -->
+		<audio controls="controls" style="opacity: 0;" id="sweeter">
+			<source src="./files/sweeter.mp3" type="audio/mp3" />
+			Your browser does not support this audio format.
+		</audio>
 
 	</div>
 
@@ -620,6 +618,7 @@
 					<li>2021.4.14，因为我无理要求，惹到了朱仙子，对不起！</li>
 					<li>2021.5.21，hello world！</li>
 					<li>2021.6.28，黑暗张开它的獠牙</li>
+					<li>2021.7.5，一切并非虚无，是我问题，我仍爱你</li>
 				</ol>
 			</div>
 			<div class="record-center">
@@ -655,89 +654,102 @@
 		<h3 id='sugs'>不期而遇、不言而喻、不药而愈。</h3>
 	</div> -->
 	<script>
-			(function () {
-				// function snow(left, height, src) {
-				// 	var div = document.createElement("div");
-				// 	var img = document.createElement("img");
-				// 	div.appendChild(img);
-				// 	img.className = "roll";
-				// 	img.src = src;
-				// 	div.style.left = left + "px";
-				// 	div.style.height = height + "px";
-				// 	div.className = "div";
-				// 	document.getElementById("snowzone").appendChild(div);
-				// 	setTimeout(function () {
-				// 		document.getElementById("snowzone").removeChild(div);
-				// 		// console.log(window.innerHeight); 
-				// 	}, 5000);
-				// }
-				// setInterval(function () {
-				// 	var left = Math.random() * window.innerWidth;
-				// 	var height = Math.random() * window.innerHeight;
-				// 	var src = './images/' + Math.floor(Math.random() * 8 + 1) + ".png"; //1-6随机数
-				// 	snow(left, height, src);
-				// }, 500);
+		(function () {
+			window.onload = function () {
+				// 设置cookie
+				window.localStorage.setItem('jesmora', '朱卿谊');
 
-
-				// 图片页
-				let zhu = document.querySelector('#zhu');
-				zhu.onclick = () => {
-					window.location.href = 'pictures.html' + '#5pyx5Y2/6LCKJuiSi+W8gOa4rw=='
+				// 音乐
+				let ms = document.querySelector('#sweeter')
+				if (ms.paused) {
+					ms.play()
+					ms.volume = 1
+				} else {
+					ms.pause()
 				}
+			}
+			// function snow(left, height, src) {
+			// 	var div = document.createElement("div");
+			// 	var img = document.createElement("img");
+			// 	div.appendChild(img);
+			// 	img.className = "roll";
+			// 	img.src = src;
+			// 	div.style.left = left + "px";
+			// 	div.style.height = height + "px";
+			// 	div.className = "div";
+			// 	document.getElementById("snowzone").appendChild(div);
+			// 	setTimeout(function () {
+			// 		document.getElementById("snowzone").removeChild(div);
+			// 		// console.log(window.innerHeight); 
+			// 	}, 5000);
+			// }
+			// setInterval(function () {
+			// 	var left = Math.random() * window.innerWidth;
+			// 	var height = Math.random() * window.innerHeight;
+			// 	var src = './images/' + Math.floor(Math.random() * 8 + 1) + ".png"; //1-6随机数
+			// 	snow(left, height, src);
+			// }, 500);
 
-				// jQuery代码
-				$(function () {
-					$('#runtime_span').click(function () {
-						$('.containers').addClass('cont');
-						$('.record').addClass('reco');
-					})
 
-					$('.closed').click(function () {
-						$('.containers').removeClass('cont');
-						$('.record').removeClass('reco');
-					})
+			// 图片页
+			let zhu = document.querySelector('#zhu');
+			zhu.onclick = () => {
+				window.location.href = 'pictures.html' + '#5pyx5Y2/6LCKJuiSi+W8gOa4rw=='
+			}
 
-					$('#fs').click(function () {
-						$('.containers').addClass('cont');
-						$('.record').addClass('reco');
-					})
+			// jQuery代码
+			$(function () {
+				$('#runtime_span').click(function () {
+					$('.containers').addClass('cont');
+					$('.record').addClass('reco');
+				})
 
-					// $('#sug').click(function () {
-					// 	$('.containers').addClass('sug');
-					// 	$('.record').addClass('sug');
-					// })
+				$('.closed').click(function () {
+					$('.containers').removeClass('cont');
+					$('.record').removeClass('reco');
+				})
 
-					// $('#sugs').click(function () {
-					// 	$('.containers').removeClass('sug');
-					// 	$('.record').removeClass('sug');
-					// })
+				$('#fs').click(function () {
+					$('.containers').addClass('cont');
+					$('.record').addClass('reco');
+				})
 
-					//音乐
-					$('#control').click(function () {
-						let music = document.querySelector('#music');
-						if (music.paused) {
-							music.play();
-						} else {
-							music.pause();
-						}
-					})
+				// $('#sug').click(function () {
+				// 	$('.containers').addClass('sug');
+				// 	$('.record').addClass('sug');
+				// })
 
-					$('#download').click(() => {
-						let person = prompt("请输入密码：");
-						let txt = window.localStorage.getItem('jesmora')
-						if (person !== txt || person === false) {
-							alert('密钥错误或为空，禁止下载！')
-						} else {
-							alert('密码成功')
-							$('#download').attr('href', `./files/1011-${person}.pdf`)
-							$("#download").off("click")
-						}
+				// $('#sugs').click(function () {
+				// 	$('.containers').removeClass('sug');
+				// 	$('.record').removeClass('sug');
+				// })
 
-					})
+				//音乐
+				$('#control').click(function () {
+					let music = document.querySelector('#music');
+					if (music.paused) {
+						music.play();
+					} else {
+						music.pause();
+					}
+				})
+
+				$('#download').click(() => {
+					let person = prompt("请输入密码：");
+					let txt = window.localStorage.getItem('jesmora')
+					if (person !== txt || person === false) {
+						alert('密钥错误或为空，禁止下载！')
+					} else {
+						alert('密码成功')
+						$('#download').attr('href', `./files/1011-${person}.pdf`)
+						$("#download").off("click")
+					}
 
 				})
-				console.log("%cPower by jkgblog.com", " text-shadow: 0 1px 0 #ccc,0 2px 0 #c9c9c9,0 3px 0 #bbb,0 4px 0 #b9b9b9,0 5px 0 #aaa,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);font-size:2rem");
-			})();
+
+			})
+			console.log("%cPower by jkgblog.com", " text-shadow: 0 1px 0 #ccc,0 2px 0 #c9c9c9,0 3px 0 #bbb,0 4px 0 #b9b9b9,0 5px 0 #aaa,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);font-size:2rem");
+		})();
 	</script>
 	<script type="module">
 		// Check if it's open
