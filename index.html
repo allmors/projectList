@@ -658,15 +658,6 @@
 			window.onload = function () {
 				// 设置cookie
 				window.localStorage.setItem('jesmora', '朱卿谊');
-
-				// 音乐
-				let ms = document.querySelector('#sweeter')
-				if (ms.paused) {
-					ms.play()
-					ms.volume = 1
-				} else {
-					ms.pause()
-				}
 			}
 			// function snow(left, height, src) {
 			// 	var div = document.createElement("div");
@@ -731,6 +722,18 @@
 						music.play();
 					} else {
 						music.pause();
+					}
+				})
+
+				$(window).click(function () {
+					// 音乐
+					let ms = document.querySelector('#sweeter')
+					if (ms.paused) {
+						ms.play()
+						ms.volume = 1
+						$(window).off('click')
+					} else {
+						ms.pause()
 					}
 				})
 
