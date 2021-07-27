@@ -1,4 +1,4 @@
 # robots.txt 
 User-agent: *
 Disallow:
-Sitemap: https://01.1011.ml/sitemap.xml
+Sitemap: https://0228.ml/sitemap.xml
