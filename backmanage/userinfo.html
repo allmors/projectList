@@ -1,0 +1,451 @@
+<!--
+ * @Author: Escher1108
+ * @Website: https://jkgblog.com
+ * @Date: 2020-11-10 09:26:52
+ * @LastEditTime: 2020-11-14 16:54:12
+ * @LastEditors: Do not edit
+ * @FilePath: \HB\Workspace\项目\hope&&love\backmanage\userinfo.html
+ * @Description: 耶斯莫拉
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/bulma.min.css">
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/fontawesome.all.js"></script>
+    <!-- 地点级联选择 -->
+    <script src="../node_modules/distpicker/dist/distpicker.min.js"></script>
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .program-body {
+            margin: 15px;
+        }
+
+        .breadnav {
+            margin: 30px auto;
+        }
+
+        .program-title {
+            height: 25px;
+            width: 100%;
+            line-height: 10px;
+            padding-left: 8px;
+            background-color: seashell;
+            border-left: 3px solid red;
+        }
+
+        .column .userinfo {
+            padding-top: 10px;
+            margin-left: 40px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- 地区信息 -->
+    <script>
+
+    </script>
+</body>
+
+</html>
+
+
+<!--
+ * @Author: Escher1108
+ * @Website: https://jkgblog.com
+ * @Date: 2020-11-07 13:40:47
+ * @LastEditTime: 2020-11-10 17:20:33
+ * @LastEditors: Do not edit
+ * @FilePath: \HB\Workspace\项目\hope&&love\backmanage\default.html
+ * @Description: 耶斯莫拉
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/bulma.min.css">
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/fontawesome.all.js"></script>
+    <!-- 地点级联选择 -->
+    <script src="../node_modules/distpicker/dist/distpicker.min.js"></script>
+    <title>会员后台管理</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        .nav-bg {
+            /* background: transparent; */
+            position: relative;
+            width: 100%;
+        }
+
+        .left-img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .bd-body {
+            position: relative;
+            width: 100%;
+            height: 95vh;
+            /* background-color: slategrey; */
+        }
+
+        .mainBox {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            /*以上设置是重点必须的*/
+        }
+
+        .mainBox .leftBox {
+            height: 100%;
+            width: 240px;
+            float: left;
+            overflow: auto;
+            /*以上设置是重点必须的*/
+            background: #fff;
+            font-size: 15px;
+            letter-spacing: 0.1em;
+            font-family: "Microsoft Yahei", "SimSun", Arial;
+            border-right: 1px solid #D9D9D9;
+            border-top: 1px solid #D9D9D9;
+        }
+
+        .menuItem a,
+        .menuItem a:visited {
+            padding-left: 20px;
+            width: 220px;
+            height: 32px;
+            background-color: #fff;
+            border-bottom: solid 1px #EAEAEA;
+            border-top: solid 1px #FFFFFF;
+            display: block;
+            line-height: 52px;
+            color: #000000;
+            margin: 5px;
+        }
+
+        .menuItem a:hover,
+        .menuItem a:active {
+            background: #f2f2f2;
+            color: #0075c7;
+        }
+
+        .mainBox .rightBox {
+            height: 100%;
+            margin-left: 241px;
+            /*以上设置是重点必须的*/
+            padding-right: 1px;
+            padding-left: 1px;
+            border-left: 1px solid #E6E6E6;
+            border-top: 1px solid #D9D9D9;
+            overflow: auto;
+        }
+
+        .mainBox .rightBox::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* .mainBox .rightBox iframe {
+      height: 100vh;
+      width: 100%;
+    } */
+        .default-body {
+            margin: 15px;
+        }
+
+        .program-body {
+            margin: 25px;
+        }
+
+        .breadnav {
+            margin: 30px auto;
+        }
+
+        .program-title {
+            height: 25px;
+            width: 100%;
+            line-height: 10px;
+            padding-left: 8px;
+            background-color: seashell;
+            border-left: 3px solid red;
+        }
+
+        .column .userinfo {
+            padding-top: 10px;
+            margin-left: 40px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar  nav-bg" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="./default.html">
+                <img src="../assets/images/logo.png" width="112" height="28">
+            </a>
+
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            <i class="fas fa-cog"></i>&nbsp设置
+                        </a>
+
+                        <div class="navbar-dropdown">
+
+                            <a class="navbar-item" href="../index.html">
+                                <i class="fas fa-power-off"></i>&nbsp
+                                退出系统
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主体 -->
+    <div class="bd-body">
+        <div class="mainBox">
+            <div class="leftBox">
+                <div class="menuItem zzjg">
+                    <a href="./userinfo.html"  style="color: #0e90e7;"><i class="fas fa-user"></i>
+                        个人信息
+                    </a>
+                </div>
+                <div class="menuItem ygfc">
+                    <a href="./project.html"><i class="fas fa-paper-plane"></i>
+                        项目发布</a>
+                </div>
+                <div class="menuItem ygfc">
+                    <a href="./projectInfo.html"><i class="fas fa-info-circle"></i>
+                      项目信息</a>
+                  </div>
+                  <div class="menuItem wghf">
+                    <a href="./data.html"><i class="fas fa-chart-line"></i>
+                        项目数据</a>
+                </div>
+                <div class="menuItem wghf">
+                    <a href="./modifypwd.html"><i class="fas fa-unlock-alt"></i>
+                        修改密码</a>
+                </div>
+            </div>
+            <!-- 右侧区域 -->
+            <div class="rightBox">
+                <div class="slideBtn">
+                    <div class="program-body">
+                        <div class="container">
+                            <!-- 面包屑导航 -->
+                            <div class="breadnav">
+                                <nav class="breadcrumb" aria-label="breadcrumbs">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <span class="icon is-small">
+                                                    <i class="fas fa-home" aria-hidden="true"></i>
+                                                </span>
+                                                <span>首页</span>
+                                            </a>
+                                        </li>
+                                        <li class="is-active">
+                                            <a href="#">
+                                                <span class="icon is-small">
+                                                    <i class="fas fa-user" aria-hidden="true"></i>
+                                                </span>
+                                                <span>个人信息</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <hr>
+                            <!-- 项目发布主内容 -->
+                            <div class="program-title">
+                                <h3 class="title is-size-6">请完善以下信息,方便我们更好的为您服务</h3>
+                            </div>
+                            <hr>
+                            <h3 class="title is-size-5">基本信息</h3>
+                            <div class="columns">
+                                <!-- 基本信息 -->
+                                <div class="column is-6">
+                                    <div class="userinfo">
+                                        <span style="color: red;"
+                                            data-spm-anchor-id="5176.2020520207.0.i6.2b674c12WXZSnS">*</span>
+                                        <span>会员身份:</span>
+                                        <span style="margin-left: 20px;">个人</span>
+                                    </div>
+                                    <!-- 真实信息 -->
+                                    <div class="userinfo">
+                                        <span style="color: red;"
+                                            data-spm-anchor-id="5176.2020520207.0.i6.2b674c12WXZSnS">*</span>
+                                        <span>真实姓名:</span>
+                                        <span style="margin-left: 20px;"><b>*三</b></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 联系信息 -->
+                            <h3 class="title is-size-5">联系信息</h3>
+                            <div class="columns">
+                                <div class="column is-7">
+                                    <!-- 国家 -->
+                                    <div class="field is-horizontal">
+                                        <div class="field-label is-normal">
+                                            <label class="label">国家/地区</label>
+                                        </div>
+                                        <div class="field-body">
+                                            <div class="field">
+                                                <p class="control is-expanded">
+                                                    <input class="input" type="text" value="中国" disabled>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 所在地区 -->
+                                    <div class="field is-horizontal">
+                                        <div class="field-label is-normal">
+                                            <label class="label">所在地区</label>
+                                        </div>
+                                        <div class="field-body">
+                                            <div class="field">
+                                                <p class="control is-expanded">
+                                                <div data-toggle="distpicker">
+                                                    <div class="select"><select data-province="---- 选择省 ----"></select>
+                                                    </div>
+                                                    <div class="select"><select data-city="---- 选择市 ----"></select>
+                                                    </div>
+                                                    <div class="select"><select data-district="---- 选择区 ----"></select>
+                                                    </div>
+                                                </div>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 街道地址 -->
+                                    <div class="field is-horizontal">
+                                        <div class="field-label is-normal">
+                                            <label class="label">街道地址</label>
+                                        </div>
+                                        <div class="field-body">
+                                            <div class="field">
+                                                <p class="control is-expanded">
+                                                    <input class="input" type="text">
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 街道地址2 -->
+                                    <div class="field is-horizontal">
+                                        <div class="field-label is-normal">
+                                            <label class="label">街道地址2</label>
+                                        </div>
+                                        <div class="field-body">
+                                            <div class="field">
+                                                <p class="control is-expanded">
+                                                    <input class="input" type="text">
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 联系电话 -->
+                                    <div class="field is-horizontal">
+                                        <div class="field-label is-normal">
+                                            <label class="label">联系电话</label>
+                                        </div>
+                                        <div class="field-body">
+                                            <div class="field">
+                                                <p class="control is-expanded">
+                                                    <input class="input" type="text">
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 传真 -->
+                                    <div class="field is-horizontal">
+                                        <div class="field-label is-normal">
+                                            <label class="label">传真</label>
+                                        </div>
+                                        <div class="field-body">
+                                            <div class="field">
+                                                <p class="control is-expanded">
+                                                    <input class="input" type="text">
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="margin-left: 135px;margin-top: 25px;">
+                                        <button class="button is-link">确定</button>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 导航响应式控制 -->
+        <script>
+            $(document).ready(function () {
+                $(".navbar-burger").click(function () {
+                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                    $(".navbar-burger").toggleClass("is-active");
+                    $(".navbar-menu").toggleClass("is-active");
+
+                });
+
+                //地点
+                $('#target').distpicker({
+                    // let xx = 
+                    province: '---- 所在省 ----',
+                    city: '---- 所在市 ----',
+                    district: '---- 所在区 ----'
+                });
+            });
+        </script>
+</body>
+
+</html>

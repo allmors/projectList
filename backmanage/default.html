@@ -1,0 +1,267 @@
+<!--
+ * @Author: Escher1108
+ * @Website: https://jkgblog.com
+ * @Date: 2020-11-07 13:40:47
+ * @LastEditTime: 2020-11-14 16:53:31
+ * @LastEditors: Do not edit
+ * @FilePath: \HB\Workspace\项目\hope&&love\backmanage\default.html
+ * @Description: 耶斯莫拉
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/bulma.min.css">
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/fontawesome.all.js"></script>
+  <title>会员后台管理</title>
+  <style>
+     body {
+      margin: 0;
+      padding: 0;
+    }
+    
+    body::-webkit-scrollbar {
+      display: none;
+    }
+
+    .nav-bg {
+      /* background: transparent; */
+      position: relative;
+      width: 100%;
+    }
+
+    .left-img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .bd-body {
+      position: relative;
+      width: 100%;
+      height: 95vh;
+      /* background-color: slategrey; */
+    }
+
+    .mainBox {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      /*以上设置是重点必须的*/
+    }
+
+    .mainBox .leftBox {
+      height: 100%;
+      width: 240px;
+      float: left;
+      overflow: auto;
+      /*以上设置是重点必须的*/
+      background: #fff;
+      font-size: 15px;
+      letter-spacing: 0.1em;
+      font-family: "Microsoft Yahei", "SimSun", Arial;
+      border-right: 1px solid #D9D9D9;
+      border-top: 1px solid #D9D9D9;
+    }
+
+    .menuItem a,
+    .menuItem a:visited {
+      padding-left: 20px;
+      width: 220px;
+      height: 32px;
+      background-color: #fff;
+      border-bottom: solid 1px #EAEAEA;
+      border-top: solid 1px #FFFFFF;
+      display: block;
+      line-height: 52px;
+      color: #000000;
+      margin: 5px;
+    }
+
+    .menuItem a:hover,
+    .menuItem a:active {
+      background: #f2f2f2;
+      color: #0075c7;
+    }
+
+    .mainBox .rightBox {
+      height: 100%;
+      margin-left: 241px;
+      /*以上设置是重点必须的*/
+      padding-right: 1px;
+      padding-left: 1px;
+      border-left: 1px solid #E6E6E6;
+      border-top: 1px solid #D9D9D9;
+      overflow: auto;
+    }
+
+    .mainBox .rightBox::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* .mainBox .rightBox iframe {
+      height: 100vh;
+      width: 100%;
+    } */
+    .default-body {
+      margin: 25px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 导航栏 -->
+  <nav class="navbar  nav-bg" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="./default.html">
+        <img src="../assets/images/logo.png" width="112" height="28">
+      </a>
+
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+        data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              <i class="fas fa-cog"></i>&nbsp设置
+            </a>
+
+            <div class="navbar-dropdown">
+
+              <a class="navbar-item" href="../index.html">
+                <i class="fas fa-power-off"></i>&nbsp
+                退出系统
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 主体 -->
+  <div class="bd-body">
+    <div class="mainBox">
+      <div class="leftBox">
+        <div class="menuItem zzjg">
+          <a href="./userinfo.html"><i class="fas fa-user"></i>
+            个人信息
+          </a>
+        </div>
+        <div class="menuItem ygfc">
+          <a href="./project.html"><i class="fas fa-paper-plane"></i>
+            项目发布</a>
+        </div>
+        <div class="menuItem ygfc">
+          <a href="./projectInfo.html"><i class="fas fa-info-circle"></i>
+            项目信息</a>
+        </div>
+        <div class="menuItem wghf">
+          <a href="./data.html"><i class="fas fa-chart-line"></i>
+              项目数据</a>
+      </div>
+        <div class="menuItem wghf">
+          <a href="./modifypwd.html"><i class="fas fa-unlock-alt"></i>
+            修改密码</a>
+        </div>
+      </div>
+      <!-- 右侧区域 -->
+      <div class="rightBox">
+        <div class="slideBtn">
+          <div class="default-body">
+            <div class="container">
+              <div class="tile is-ancestor">
+                <div class="tile is-4 is-vertical is-parent">
+                  <div class="tile is-child box">
+                    <p class="title">One</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque
+                      tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+                  </div>
+                  <div class="tile is-child box">
+                    <p class="title">Two</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque
+                      tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+                  </div>
+                </div>
+                <div class="tile is-parent">
+                  <div class="tile is-child box">
+                    <p class="title">Three</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at
+                      pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.
+                      Morbi maximus, leo sit amet vehicula eleifend, nunc dui porta orci, quis semper odio felis ut
+                      quam.</p>
+                    <p>Suspendisse varius ligula in molestie lacinia. Maecenas varius eget ligula a sagittis.
+                      Pellentesque interdum, nisl nec interdum maximus, augue diam porttitor lorem, et sollicitudin
+                      felis neque sit amet erat. Maecenas imperdiet felis nisi, fringilla luctus felis hendrerit sit
+                      amet. Aenean vitae gravida diam, finibus dignissim turpis. Sed eget varius ligula, at volutpat
+                      tortor.</p>
+                    <p>Integer sollicitudin, tortor a mattis commodo, velit urna rhoncus erat, vitae congue lectus dolor
+                      consequat libero. Donec leo ligula, maximus et pellentesque sed, gravida a metus. Cras ullamcorper
+                      a nunc ac porta. Aliquam ut aliquet lacus, quis faucibus libero. Quisque non semper leo.</p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="tile is-ancestor">
+                <div class="tile is-4 is-vertical is-parent">
+                  <div class="tile is-child box">
+                    <p class="title">One</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque
+                      tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+                  </div>
+                  <div class="tile is-child box">
+                    <p class="title">Two</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque
+                      tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+                  </div>
+                </div>
+                <div class="tile is-parent">
+                  <div class="tile is-child box">
+                    <p class="title">Three</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at
+                      pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.
+                      Morbi maximus, leo sit amet vehicula eleifend, nunc dui porta orci, quis semper odio felis ut
+                      quam.</p>
+                    <p>Suspendisse varius ligula in molestie lacinia. Maecenas varius eget ligula a sagittis.
+                      Pellentesque interdum, nisl nec interdum maximus, augue diam porttitor lorem, et sollicitudin
+                      felis neque sit amet erat. Maecenas imperdiet felis nisi, fringilla luctus felis hendrerit sit
+                      amet. Aenean vitae gravida diam, finibus dignissim turpis. Sed eget varius ligula, at volutpat
+                      tortor.</p>
+                    <p>Integer sollicitudin, tortor a mattis commodo, velit urna rhoncus erat, vitae congue lectus dolor
+                      consequat libero. Donec leo ligula, maximus et pellentesque sed, gravida a metus. Cras ullamcorper
+                      a nunc ac porta. Aliquam ut aliquet lacus, quis faucibus libero. Quisque non semper leo.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 导航响应式控制 -->
+    <script>
+      $(document).ready(function () {
+        $(".navbar-burger").click(function () {
+          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+          $(".navbar-burger").toggleClass("is-active");
+          $(".navbar-menu").toggleClass("is-active");
+
+        });
+      });
+    </script>
+</body>
+
+</html>

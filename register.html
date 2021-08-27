@@ -1,0 +1,125 @@
+<!--
+ * @Author: Escher1108
+ * @Website: https://jkgblog.com
+ * @Date: 2020-10-23 09:26:17
+ * @LastEditTime: 2020-11-17 16:48:24
+ * @LastEditors: Do not edit
+ * @FilePath: \HB\Workspace\项目\hope&&love\register.html
+ * @Description: 耶斯莫拉
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href='https://fonts.loli.net/css?family=Open+Sans' rel='stylesheet'> -->
+    <link rel="stylesheet" href="./assets/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/css/reg.css">
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/fontawesome.all.js"></script>
+   
+    <title>Register</title>
+</head>
+
+<body>
+    <div class="wh">
+        <div class="sec">
+            <div class="box box-stlye">
+                <p class="title" style="color: #fff;">Sign Up</p>
+                <form action="#">
+                    <div class="field">
+                        <p class="control has-icons-left has-icons-right">
+                            <input class="input" type="text" placeholder="Username" id="username">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-user"></i>
+                            </span>
+                            <!-- <span class="icon is-small is-right">
+                        <i class="fas fa-check"></i>
+                      </span> -->
+                        </p>
+                        <!-- 信息提示区域 -->
+                        <p class="help is-danger" id="u" style="display: none;">This username is invalid</p>
+                        <p class="help is-danger" id="ucode" style="display: none;">This username already exists</p>
+                    </div>
+                    <div class="field">
+                        <p class="control has-icons-left">
+                            <input class="input" type="email" placeholder="Email" id="email">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-envelope"></i>
+                            </span>
+                        </p>
+                        <!-- 信息提示区域 -->
+                        <p class="help is-danger" id="e" style="display: none;">This email is available</p>
+                        <p class="help is-danger" id="uemail" style="display: none;">This email already exists</p>
+                    </div>
+                    <div class="field">
+                        <p class="control has-icons-left">
+                            <input class="input" type="text" placeholder="age" id="age">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-calendar-week"></i>
+                            </span>
+                        </p>
+                        <p class="help is-danger" id="a" style="display: none;">This age is available</p>
+                    </div>
+                    <div class="field">
+                        <p class="control has-icons-left">
+                            <input class="input" type="password" placeholder="Password" id="password">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                        </p>
+                        <p class="help is-danger" id="p" style="display: none;">This password is short or simple</p>
+                    </div>
+                    <div class="field">
+                        <div class="columns is-gapless">
+                            <div class="column">
+                                <p class="control has-icons-left" style="width: 369px;">
+                                    <input class="input" type="text" placeholder="Phone" id="phone">
+
+                                    <span class="icon is-small is-left">
+                                        <i class="fas fa-phone"></i>
+                                    </span>
+                                </p>
+                                <!-- 信息提示区域 -->
+                                <p class="help is-danger" id='pn' style="display: none;">This phone is available</p>
+                                <p class="help is-danger" id="uphone" style="display: none;">This phone already
+                                    exists</p>
+                            </div>
+                            <div class="column">
+                                <button class="button" style="background-color: transparent;color: #fff;"
+                                    id="sendcode">Send Code</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <p class="control">
+                            <input class="input" type="text" placeholder="Verification code">
+                        </p>
+                    </div>
+                    <span>Already have account？<a href="login.html">Click here to login</a></span>
+                    <!-- 登录按钮 -->
+                    <div class="field" style="padding-top: 10px;">
+                        <p class="control">
+                            <button class="button is-light">
+                                Register
+                            </button>
+                        </p>
+                    </div>
+                </form>
+                <hr>
+                <div class="level" style="margin-top: 10px;">
+                    <div class="level-item">
+                        <span>中文</span>
+                    </div>
+                    <div class="level-item">
+                        <span>English</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/js/verificode.js"></script>
+</body>
+
+</html>

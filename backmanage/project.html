@@ -1,0 +1,453 @@
+<!--
+ * @Author: Escher1108
+ * @Website: https://jkgblog.com
+ * @Date: 2020-11-07 13:40:47
+ * @LastEditTime: 2020-11-17 09:28:54
+ * @LastEditors: Do not edit
+ * @FilePath: \HB\Workspace\项目\hope&&love\backmanage\project.html
+ * @Description: 耶斯莫拉
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/bulma.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/fontawesome.all.js"></script>
+    <!-- 地点级联选择 -->
+    <script src="../node_modules/distpicker/dist/distpicker.min.js"></script>
+    <title>会员后台管理</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        .nav-bg {
+            /* background: transparent; */
+            position: relative;
+            width: 100%;
+        }
+
+        .left-img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .bd-body {
+            position: relative;
+            width: 100%;
+            height: 95vh;
+            /* background-color: slategrey; */
+        }
+
+        .mainBox {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            /*以上设置是重点必须的*/
+        }
+
+        .mainBox .leftBox {
+            height: 100%;
+            width: 240px;
+            float: left;
+            overflow: auto;
+            /*以上设置是重点必须的*/
+            background: #fff;
+            font-size: 15px;
+            letter-spacing: 0.1em;
+            font-family: "Microsoft Yahei", "SimSun", Arial;
+            border-right: 1px solid #D9D9D9;
+            border-top: 1px solid #D9D9D9;
+        }
+
+        .menuItem a,
+        .menuItem a:visited {
+            padding-left: 20px;
+            width: 220px;
+            height: 32px;
+            background-color: #fff;
+            border-bottom: solid 1px #EAEAEA;
+            border-top: solid 1px #FFFFFF;
+            display: block;
+            line-height: 52px;
+            color: #000000;
+            margin: 5px;
+        }
+
+        .menuItem a:hover,
+        .menuItem a:active {
+            background: #f2f2f2;
+            color: #0075c7;
+        }
+
+        .mainBox .rightBox {
+            height: 100%;
+            margin-left: 241px;
+            /*以上设置是重点必须的*/
+            padding-right: 1px;
+            padding-left: 1px;
+            border-left: 1px solid #E6E6E6;
+            border-top: 1px solid #D9D9D9;
+            overflow: auto;
+        }
+
+        .mainBox .rightBox::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* .mainBox .rightBox iframe {
+      height: 100vh;
+      width: 100%;
+    } */
+        .project-body {
+            margin: 25px;
+        }
+
+        .breadnav {
+            margin: 30px auto;
+        }
+
+        .program-title {
+            height: 25px;
+            width: 100%;
+            line-height: 10px;
+            padding-left: 8px;
+            background-color: seashell;
+            border-left: 3px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar  nav-bg" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="./default.html">
+                <img src="../assets/images/logo.png" width="112" height="28">
+            </a>
+
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            <i class="fas fa-cog"></i>&nbsp设置
+                        </a>
+
+                        <div class="navbar-dropdown">
+
+                            <a class="navbar-item" href="../index.html">
+                                <i class="fas fa-power-off"></i>&nbsp
+                                退出系统
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主体 -->
+    <div class="bd-body">
+        <div class="mainBox">
+            <div class="leftBox">
+                <div class="menuItem zzjg">
+                    <a href="./userinfo.html"><i class="fas fa-user"></i>
+                        个人信息
+                    </a>
+                </div>
+                <div class="menuItem ygfc">
+                    <a href="./project.html" style="color: #0e90e7;"><i class="fas fa-paper-plane"></i>
+                        项目发布</a>
+                </div>
+                <div class="menuItem ygfc">
+                    <a href="./projectInfo.html"><i class="fas fa-info-circle"></i>
+                        项目信息</a>
+                </div>
+                <div class="menuItem wghf">
+                    <a href="./data.html"><i class="fas fa-chart-line"></i>
+                        项目数据</a>
+                </div>
+                <div class="menuItem wghf">
+                    <a href="./modifypwd.html"><i class="fas fa-unlock-alt"></i>
+                        修改密码</a>
+                </div>
+            </div>
+            <!-- 右侧区域 -->
+            <div class="rightBox">
+                <div class="slideBtn">
+                    <div class="project-body">
+                        <div class="container">
+                            <!-- 面包屑导航 -->
+                            <div class="breadnav">
+                                <nav class="breadcrumb" aria-label="breadcrumbs">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <span class="icon is-small">
+                                                    <i class="fas fa-home" aria-hidden="true"></i>
+                                                </span>
+                                                <span>首页</span>
+                                            </a>
+                                        </li>
+                                        <li class="is-active">
+                                            <a href="#">
+                                                <span class="icon is-small">
+                                                    <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                                                </span>
+                                                <span>项目发布</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <hr>
+                            <!-- 项目发布主内容 -->
+                            <div class="program-title">
+                                <h3 class="title is-size-5">项目及发起人信息</h3>
+                            </div>
+                            <hr>
+                            <h3 class="title is-size-4">项目信息</h3>
+                            <div class="columns">
+                                <div class="column is-10">
+                                    <!-- 项目名 -->
+                                    <div class="field is-horizontal">
+                                        <div class="field-label is-normal">
+                                            <label class="label">项目名称</label>
+                                        </div>
+                                        <div class="field-body">
+                                            <div class="field">
+                                                <p class="control is-expanded">
+                                                    <input class="input" type="text" required>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 项目简介 -->
+                                    <div class="field is-horizontal">
+                                        <div class="field-label is-normal">
+                                            <label class="label">项目描述</label>
+                                        </div>
+                                        <div class="field-body">
+                                            <div class="field">
+                                                <div class="control">
+                                                    <textarea class="textarea" placeholder="请在此处填写项目描述..."></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 筹集金额 -->
+                                    <div class="field is-horizontal">
+                                        <div class="field-label is-normal">
+                                            <label class="label">筹集金额</label>
+                                        </div>
+                                        <div class="field-body">
+                                            <div class="field">
+                                                <p class="control is-expanded" style="width: 120px;">
+                                                    <input class="input" type="text" required>
+                                                </p>
+                                                <b>筹集金额不能低于100元，不能高于10000000元</b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 项目图片 -->
+                                    <div class="field is-horizontal">
+                                        <div class="field-label is-normal">
+                                            <label class="label">项目头图</label>
+                                        </div>
+                                        <div class="field-body">
+                                            <div class="field">
+                                                <p class="control is-expanded">
+                                                    <!-- 图片上传控件 -->
+                                                <div class="file has-name is-fullwidth">
+                                                    <label class="file-label">
+                                                        <input class="file-input" type="file" name="resume" id="file">
+                                                        <span class="file-cta">
+                                                            <span class="file-icon">
+                                                                <i class="fas fa-upload"></i>
+                                                            </span>
+                                                            <span class="file-label">
+                                                                上传图片
+                                                            </span>
+                                                        </span>
+                                                        <span class="file-name" id="fileName">
+                                                            文件预览
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                                </p>
+                                                <b>图片上无文字,支持jpg、jpeg、png、gif格式，大小不超过2M</b>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 发起人信息 -->
+                            <h3 class="title is-size-4">发起人信息</h3>
+                            <div class="columns">
+                                <div class="column is-10">
+                                    <!-- 项目名 -->
+                                    <div class="field is-horizontal">
+                                        <div class="field-label is-normal">
+                                            <label class="label">自我介绍</label>
+                                        </div>
+                                        <div class="field-body">
+                                            <div class="field">
+                                                <p class="control is-expanded">
+                                                    <input class="input" type="text" required>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 发起人简介 -->
+                                    <div class="field is-horizontal">
+                                        <div class="field-label is-normal">
+                                            <label class="label">详细自我介绍</label>
+                                        </div>
+                                        <div class="field-body">
+                                            <div class="field">
+                                                <div class="control">
+                                                    <textarea class="textarea" placeholder="请在此处填写详细自我介绍..."></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 发布地址 -->
+                                    <div class="field is-horizontal">
+                                        <div class="field-label is-normal">
+                                            <label class="label">发布地址</label>
+                                        </div>
+                                        <div class="field-body">
+                                            <div class="field">
+                                                <p class="control is-expanded">
+                                                <div data-toggle="distpicker">
+                                                    <div class="select"><select data-province="---- 选择省 ----"></select>
+                                                    </div>
+                                                    <div class="select"><select data-city="---- 选择市 ----"></select>
+                                                    </div>
+                                                    <div class="select"><select data-district="---- 选择区 ----"></select>
+                                                    </div>
+                                                </div>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 联系电话 -->
+                                    <div class="field is-horizontal">
+                                        <div class="field-label is-normal">
+                                            <label class="label">联系电话</label>
+                                        </div>
+                                        <div class="field-body">
+                                            <div class="field">
+                                                <p class="control is-expanded">
+                                                    <input class="input" type="text" required>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 联系邮箱 -->
+                                    <div class="field is-horizontal">
+                                        <div class="field-label is-normal">
+                                            <label class="label">联系邮箱</label>
+                                        </div>
+                                        <div class="field-body">
+                                            <div class="field">
+                                                <p class="control is-expanded">
+                                                    <input class="input" type="email" required>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="release"
+                                        style="width: 100%;height: 25px;text-align: center;margin: 10px auto;">
+                                        <button class="button is-link" id="pubbtn">发布</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 导航响应式控制 -->
+    <script>
+        $(document).ready(function () {
+            $(".navbar-burger").click(function () {
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                $(".navbar-burger").toggleClass("is-active");
+                $(".navbar-menu").toggleClass("is-active");
+
+            });
+
+            //地点
+            $('#target').distpicker({
+                province: '---- 所在省 ----',
+                city: '---- 所在市 ----',
+                district: '---- 所在区 ----'
+            });
+
+            $('#file').change(function () {
+                let file = $('#file')[0].files
+                // console.log(file)
+                for (let i of file) {
+                    console.log(i.name)
+                    $('#fileName').text(i.name)
+                }
+            });
+
+            $('#pubbtn').click(function () {
+                let timerInterval
+                Swal.fire({
+                    title: '完成!',
+                    html: '发布成功,<b></b>秒后自动进入项目信息界面.',
+                    timer: 3000,
+                    timerProgressBar: true,
+                    willOpen: () => {
+                        Swal.showLoading()
+                        timerInterval = setInterval(() => {
+                            const content = Swal.getContent()
+                            if (content) {
+                                const b = content.querySelector('b')
+                                if (b) {
+                                    b.textContent = Swal.getTimerLeft()
+                                }
+                            }
+                        }, 10)
+                    },
+                    willClose: () => {
+                        clearInterval(timerInterval)
+                    }
+                }).then((result) => {
+                    /* Read more about handling dismissals below */
+                    if (result.dismiss === Swal.DismissReason.timer) {
+                        window.location.href = './projectInfo.html'
+                    }
+                })
+            })
+
+        });
+    </script>
+</body>
+
+</html>

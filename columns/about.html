@@ -1,0 +1,209 @@
+<!--
+ * @Author: Escher1108
+ * @Website: https://jkgblog.com
+ * @Date: 2020-11-11 11:33:22
+ * @LastEditTime: 2020-11-13 09:57:12
+ * @LastEditors: Do not edit
+ * @FilePath: \HB\Workspace\项目\hope&&love\columns\about.html
+ * @Description: 耶斯莫拉
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/bulma.min.css">
+    <!-- <link rel="stylesheet" href="../assets/css/raise.css"> -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/fontawesome.all.js"></script>
+    <title>About</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scrollbar-base-color: #ec0a0a;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .bg {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .bg::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            background-image: url('../assets/images/about.jpg');
+            background-size: cover;
+            background-position: center center;
+            filter: blur(2px);
+            transform: scale(1.03);
+        }
+
+        .nav-bg {
+            /* background: transparent; */
+            position: fixed;
+            width: 100%;
+        }
+
+        .one-title {
+            position: relative;
+            width: 100%;
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .one-title .one-title-child {
+            text-align: center;
+            padding: 10px;
+
+        }
+
+        .one-title .one-title-child .child-title {
+            padding: 5px;
+            border-bottom: 3px solid red;
+            font-size: 3.8rem;
+            color: #fff;
+        }
+
+        .one-title .one-title-child .child-subtitle {
+            padding: 10px;
+            letter-spacing: 1px;
+            color: #fff;
+        }
+
+        .bg-about {
+            position: relative;
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <!-- 导航栏 -->
+        <nav class="navbar  nav-bg" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="../index.html">
+                    <img src="../assets/images/logo.png" width="112" height="28">
+                </a>
+
+                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                    data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="../index.html">
+                        <i class="fas fa-home"></i>&nbsp首页
+                    </a>
+
+                    <a class="navbar-item" href="../project/raise.html">
+                        <i class="fas fa-hand-holding-usd"></i>&nbsp筹款
+                    </a>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            <i class="fas fa-columns"></i>&nbsp专栏
+                        </a>
+
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="./about.html">
+                                关于我们
+                            </a>
+                            <a class="navbar-item" href="./join.html">
+                                加入我们
+                            </a>
+                            <a class="navbar-item" href="#contact">
+                                联系我们
+                            </a>
+                            <hr class="navbar-divider">
+                            <a class="navbar-item" href="./report.html">
+                                举报滥用
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-primary" href="../register.html">
+                                <strong>Sign up</strong>
+                            </a>
+                            <a class="button is-light" href="../login.html">
+                                Log in
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- 主体 -->
+        <div class="container">
+            <div class="one-title">
+                <div class="one-title-child">
+                    <h1 class="title child-title">
+                        关于
+                    </h1>
+
+                    <!-- <h2 class="subtitle child-subtitle">
+                        多一份关怀，多一份爱
+                    </h2> -->
+                    <a style="background: transparent;color: aliceblue;" class="button is-light is-large"
+                        href="#next"><i class="fas fa-chevron-circle-down"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 下级区域 -->
+    <div class="bg-about">
+        <section class="section">
+            <div class="container">
+                <div class="columns">
+                    <div class="column is-6">
+                        <figure class="image">
+                            <img src="../assets/images/p2.jpg">
+                        </figure>
+                    </div>
+                    <div class="column is-6">
+                        <figure class="image">
+                            <img src="../assets/images/p2.jpg">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+    <!-- 导航响应式控制 -->
+    <script>
+        $(document).ready(function () {
+            $(".navbar-burger").click(function () {
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                $(".navbar-burger").toggleClass("is-active");
+                $(".navbar-menu").toggleClass("is-active");
+
+            });
+        });
+    </script>
+</body>
+
+</html>

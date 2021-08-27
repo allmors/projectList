@@ -1,0 +1,431 @@
+<!--
+ * @Author: Escher1108
+ * @Website: https://jkgblog.com
+ * @Date: 2020-11-07 13:40:47
+ * @LastEditTime: 2020-11-20 09:03:54
+ * @LastEditors: Do not edit
+ * @FilePath: \HB\Workspace\项目\hope&&love\project\raises.html
+ * @Description: 耶斯莫拉
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/bulma.min.css">
+    <link rel="stylesheet" href="../node_modules/sweetalert2/dist/sweetalert2.min.css">
+    <script src="../node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/fontawesome.all.js"></script>
+    <title>RAISES</title>
+    <style>
+        .nav-bg {
+            /* background: transparent; */
+            position: fixed;
+            width: 100%;
+        }
+
+        .left-img {
+            width: 100%;
+            height: 290px;
+            object-fit: cover;
+        }
+
+        .bd-body {
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            background-image: radial-gradient(circle, red, black);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .donate {
+            top: -100%;
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #00000080;
+            transition: 1.5s;
+        }
+
+        .donate .close {
+            position: absolute;
+            color: #ffffff;
+            font-size: 1.2rem;
+            cursor: pointer;
+            float: right;
+            top: 70px;
+            right: 40px;
+        }
+
+        .donate .donate-body {
+            width: 80%;
+            height: 80vh;
+            background-color: #f2f2f2;
+            box-shadow: 0px 5px 10px rgba(14, 25, 80, 0.3);
+        }
+
+        .donate .donate-body .donate-child {
+            margin: 80px;
+        }
+
+        .chicklet-list ul,
+        li {
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+            display: inline;
+        }
+
+        ol,
+        ul,
+        dl {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        .chicklet-list {
+            background: #fff;
+            padding: 30px 30px 25px;
+            width: auto;
+            cursor: pointer;
+        }
+
+        .chicklet-list input[type='radio'] {
+            display: none;
+        }
+
+        .chicklet-list :checked+label {
+            background: #ff5e14;
+            color: #f7f7f7;
+            text-shadow: none;
+        }
+
+        .chicklet-list label {
+            font-size: 16px;
+            font-weight: normal;
+            background: #ffffff;
+            border: 1px solid #e5e5e5;
+            color: #000;
+            padding: 8px 27px;
+            text-align: center;
+            border-radius: 0;
+            cursor: pointer;
+            -webkit-transition: all 0.1s ease-out;
+            transition: all 0.1s ease-out;
+        }
+
+        .other-amount input {
+            margin-top: 20px;
+            width: 200px;
+
+        }
+
+        .chicklet-list ul li {
+            display: inline;
+            padding: 30px;
+
+        }
+
+        .show {
+            top: 0;
+        }
+
+        .hide {
+            top: -100%;
+        }
+
+        .labelcss {
+            background: #eee;
+        }
+
+        @media screen and (max-width: 760px) {
+            .donate {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+
+            .donate .donate-body {
+                width: 100%;
+                height: 100vh;
+
+            }
+
+            .chicklet-list {
+                background: #fff;
+                padding: 30px 30px 25px;
+                width: 100%;
+                height: auto;
+                cursor: pointer;
+            }
+
+            .donate .donate-body .donate-child {
+                margin: 90px auto;
+            }
+
+            .donate .close {
+                position: absolute;
+                color: #4a4a4a;
+                font-size: 1.2rem;
+                cursor: pointer;
+                float: right;
+                top: 70px;
+                right: 40px;
+            }
+
+            .chicklet-list ul,
+            li {
+                list-style: none;
+                padding: 0px;
+                margin: 0px;
+                display: inline;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar  nav-bg" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="../index.html">
+                <img src="../assets/images/logo.png" width="112" height="28">
+            </a>
+
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="../index.html">
+                    <i class="fas fa-home"></i>&nbsp首页
+                </a>
+
+                <a class="navbar-item" href="./raise.html">
+                    <i class="fas fa-hand-holding-usd"></i>&nbsp筹款
+                </a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        <i class="fas fa-columns"></i>&nbsp专栏
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="../columns/join.html">
+                            关于我们
+                        </a>
+                        <a class="navbar-item" href="../columns/join.html">
+                            加入我们
+                        </a>
+                        <a class="navbar-item" href="../index.html#contact">
+                            联系我们
+                        </a>
+                        <hr class="navbar-divider">
+                        <a class="navbar-item" href="../columns/report.html">
+                            举报滥用
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            <i class="fas fa-user"></i>&nbsp张三
+                        </a>
+
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="../backmanage/default.html">
+                                <i class="fab fa-centercode"></i>&nbsp
+                                会员中心
+                            </a>
+                            <a class="navbar-item">
+                                <i class="fas fa-envelope"></i>&nbsp
+                                信息
+                            </a>
+                            <hr class="navbar-divider">
+                            <a class="navbar-item" href="../index.html">
+                                <i class="fas fa-power-off"></i>&nbsp
+                                退出系统
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主体 -->
+    <div class="bd-body">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-2">
+
+                </div>
+                <div class="column is-5">
+                    <div class="tile is-ancestor">
+                        <div class="tile is-parent">
+                            <div class="tile is-child">
+                                <div class="box">
+                                    <!-- 描述 -->
+                                    <img class="left-img" src="../assets/images/p3.jpg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-3">
+                    <div class="tile is-ancestor">
+                        <div class="tile is-parent is-vertical">
+                            <div class="tile is-child">
+                                <div class="level">
+                                    <div class="level-left">
+                                        <div class="box">
+                                            <div>
+                                                <i class="fas fa-tag"></i>
+                                                <span id="statusCheck">筹集中</span>~
+                                            </div><br>
+                                            <h1 class="title">已筹资金：￥50000.00</h1>
+                                            <div class="level">
+                                                <div class="level-left">目标金额：<b>50000.00</b>&nbsp万元</div>
+                                                <div class="level-right">达成 ： 60%</div>
+                                            </div>
+                                            <!-- 进度条 -->
+                                            <progress class="progress is-black" value="10"
+                                                max="100"><span>60%</span></progress>
+                                            <div class="level">
+                                                <div class="level-left">
+                                                    <p>已有 <b><span>640</span></b> 人赞助该项目</p>
+                                                </div>
+                                            </div>
+                                            <button class="button is-fullwidth is-warning is-medium"
+                                                id="donate">立即支持</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 捐款界面 -->
+    <div class="donate">
+        <!-- 关闭按钮 -->
+        <div class="close"><i class="fas fa-times"></i></div>
+        <!-- 捐赠主体 -->
+        <div class="donate-body">
+            <div class="donate-child">
+                <h1 class="title is-size-3 has-text-centered">捐赠信息</h1>
+                <h4 class="is-size-4">请选择您要捐赠的金额或者自定义:</h4>
+                <ul class="chicklet-list clearfix">
+                    <li>
+                        <input type="radio" id="donate-amount-1" name="donate-amount">
+                        <label id="label" for="donate-amount-1" data-amount="1000">￥1000</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="donate-amount-2" name="donate-amount" checked="checked">
+                        <label for="donate-amount-2" data-amount="2000">￥2000</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="donate-amount-3" name="donate-amount">
+                        <label for="donate-amount-3" data-amount="3000">￥3000</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="donate-amount-4" name="donate-amount">
+                        <label for="donate-amount-4" data-amount="4000">￥4000</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="donate-amount-5" name="donate-amount">
+                        <label for="donate-amount-5" data-amount="5000">￥5000</label>
+                    </li>
+                    <li class="other-amount">
+                        <div class="input-container" data-message="Every dollar you donate helps end hunger.">
+                            <input type="text" id="other-amount" placeholder="自定义金额" class="input"></div>
+                    </li>
+                </ul>
+
+                <div class="">
+                    <h4 class="is-size-4">请选择支付方式：</h4>
+                    <ul class="clearfix">
+                        <li class="button">
+                            <input type="radio" id="alipay" name="pay">
+                            <label for="alipay">支付宝</label>
+                        </li>
+                        <li class="button">
+                            <input type="radio" id="paypal" name="pay" checked="checked">
+                            <label for="paypal">Paypal</label>
+                        </li>
+                        <li class="button">
+                            <input type="radio" id="wechat" name="pay">
+                            <label for="wechat">微信</label>
+                        </li>
+                    </ul>
+
+                </div>
+                <button class="button is-danger">捐赠</button>
+            </div>
+        </div>
+    </div>
+    <!-- 导航响应式控制 -->
+    <script>
+        $(document).ready(function () {
+            $(".navbar-burger").click(function () {
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                $(".navbar-burger").toggleClass("is-active");
+                $(".navbar-menu").toggleClass("is-active");
+
+            });
+
+            //立即支持事件
+            $('#donate').click(function () {
+                //状态审核
+                const STATUS = $('#statusCheck').text().toString()
+                if (STATUS == '审核中') {
+                    $('.donate').toggleClass('hide')
+                    Swal.fire({
+                        icon: 'error',
+                        title: '审核中~',
+                        text: '感谢您的支持，该项目审核中!'
+                    })
+                }else{
+                    $('.bd-body').toggleClass('hide')
+                    $('.donate').toggleClass('show')
+                }
+            })
+
+            $('.close').click(function () {
+                $('.donate').toggleClass('show')
+            })
+
+            //自定义金额事件
+            $('#other-amount').on('mouseenter', function () {
+                const label = $('#label')
+            });
+
+
+        });
+    </script>
+</body>
+
+</html>

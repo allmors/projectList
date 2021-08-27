@@ -1,0 +1,119 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+.bg {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+}
+
+.bg::before {
+    content: '';
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-image: url('../images/1.jpg');
+    background-size: cover;
+    background-position: center center;
+    filter: blur(3px);
+    transform: scale(1.03);
+    background-position-x: 0px;
+    background-position-y: 0px;
+}
+
+.nav-bg {
+    /* background: transparent; */
+    position: fixed;
+    width: 100%;
+}
+
+.one-title {
+    position: absolute;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.one-title .one-title-child {
+    text-align: center;
+    padding: 10px;
+
+}
+
+.one-title .one-title-child .child-title {
+    padding: 5px;
+    border-bottom: 3px solid red;
+    font-size: 3.8rem;
+    color: #fff;
+}
+
+.one-title .one-title-child .child-subtitle {
+    padding: 10px;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.two-title {
+    width: 100%;
+    height: auto;
+    position: relative;
+    /* background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%); */
+}
+
+.two-title h2 {
+    letter-spacing: 15px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 2.5rem;
+    background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
+    -webkit-background-clip: text;
+    
+}
+
+.three-title{
+    position: relative;
+    width: 100%;
+    background-color: #f0f3f5;
+    /* height: 90vh; */
+}
+
+.three-title .my-work .work-item {
+    margin-bottom: 1rem;
+    -webkit-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+    border-radius: 5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 5px 20px rgba(14, 25, 80, 0.3);
+}
+
+.three-title .my-work .work-item:hover{
+    transition: 1.2s;
+    transform:scale(1.1);
+}
+
+.three-title .my-work .columnp{
+    padding: 1.2rem;
+}
+
+.footer-end {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.copyright{
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
