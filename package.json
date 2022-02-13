@@ -1,0 +1,29 @@
+{
+  "name": "cors-proxy",
+  "version": "0.0.2",
+  "description": "CORS Anywhere is a reverse proxy which adds CORS headers to the proxied request. Request URL is taken from the path",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/escher1108"
+  },
+  "keywords": [
+    "cors",
+    "cross-domain",
+    "http-proxy",
+    "proxy"
+  ],
+  "author": "netnr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/escher1108"
+  },
+  "homepage": "https://github.com/escher1108",
+  "dependencies": {
+    "http-proxy": "1.18.1",
+    "proxy-from-env": "1.1.0"
+  }
+}
