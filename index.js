@@ -12,7 +12,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 const app = express();
 
 
-const url = 'https://red.fuckjs.workers.dev';
+const url = 'https://jspro.nbsp.workers.dev';
 const PORT = process.env.PORT || 5001;
 // const url = 'https://www.baidu.com'
 
