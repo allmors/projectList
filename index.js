@@ -2,7 +2,7 @@
  * @Author: Escher1108
  * @Website: https://jkgblog.com
  * @Date: 2022-05-15 18:48:00
- * @LastEditTime: 2022-05-15 18:48:01
+ * @LastEditTime: 2022-05-16 12:00:06
  * @LastEditors: Do not edit
  * @FilePath: \projectList\index.js
  * @Description: 耶斯莫拉
@@ -12,7 +12,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 const app = express();
 
 
-const url = 'https://redtube.nbsp.workers.dev';
+const url = 'https://red.fuckjs.workers.dev';
 const PORT = process.env.PORT || 5001;
 // const url = 'https://www.baidu.com'
 
