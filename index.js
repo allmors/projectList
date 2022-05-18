@@ -12,6 +12,16 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 const app = express();
 
 
+app.all('*', function (req, res, next) {
+    console.log("=====================")
+    console.log(req.url)
+    console.log("=====================")
+    res.header("Access-Control-Allow-Origin", req.headers.origin);//访问的主机名称
+  	res.header("Access-Control-Allow-Headers","Origin, X-Requested-With, Content-Type, Accept");
+  	res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS");//允许以下方法进行跨域请求
+    next();
+});
+
 const url = 'https://jsp.fuckjs.workers.dev';
 const PORT = process.env.PORT || 5001;
 // const url = 'https://www.baidu.com'
